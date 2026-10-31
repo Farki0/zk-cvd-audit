@@ -1,4 +1,4 @@
-//! Shared logic of the prototype: formats of PROTOTYPE_SPEC.md section 2, the guest program (Algorithm 5.1)
+//! Shared logic of the prototype: the hash and record formats, the guest program (Algorithm 5.1)
 //! and the checks of the auditor that do not need a zkVM (checks 2, 3, 5, 6, 7).
 //! The same code runs inside the zkVM guest and natively in the host.
 
@@ -412,7 +412,7 @@ pub fn check_5_6_7(participants: &BTreeMap<String, String>, js: &[Journal]) -> R
     Ok(Checked { heads, per_org, verdict })
 }
 
-// ----------------------------------------------------------------------------- aggregation guest (C7)
+// ----------------------------------------------------------------------------- aggregation guest
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq)]
 pub struct AggJournal {

@@ -1,4 +1,4 @@
-//! Prover host (C4), auditor (C5), acceptance tests, attack tests and single-proof measurement (for C8).
+//! Prover host, auditor, acceptance tests, attack tests and single-proof measurement (for bench.py).
 mod lib_host;
 use lib_host::*;
 
@@ -14,7 +14,7 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Cmd {
-    /// Print the environment (for section 5.1).
+    /// Print the environment (machine, toolchain, guest image ids).
     Env,
     /// Reproduce vectors/hash_examples.json.
     Hashes { #[arg(long)] vectors: PathBuf },
@@ -57,7 +57,7 @@ enum Cmd {
         #[arg(long)] org: String,
         #[arg(long, default_value = "full")] variant: String,
     },
-    /// Aggregation guest (C7): prove the aggregate of the receipts of every organisation; print metrics.
+    /// Aggregation guest: prove the aggregate of the receipts of every organisation; print metrics.
     Agg {
         #[arg(long)] stmt: PathBuf,
         #[arg(long)] scenario: PathBuf,

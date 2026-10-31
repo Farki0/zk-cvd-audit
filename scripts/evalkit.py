@@ -78,7 +78,7 @@ def run_cvd(instance, plans, order=None, close=True, serve='phased', secret=Fals
     'mid'). order: the maintainer's serving order (default: the order of plans). serve='phased' sends every
     disclosure, then every grace_end (as vectors.py); serve='per-vendor' sends a vendor its disclosure and grace_end
     before serving the next one. secret=True draws salts and nonces from a CSPRNG.
-    The public message log of D8 (each organisation's messages in order, with partner and direction) is recorded at
+    The public message log (each organisation's messages in order, with partner and direction) is recorded at
     every hand-off in LOG[instance], independently of the slices."""
     order = list(order or plans)
     S = SecretSlice if secret else P.Slice
@@ -193,7 +193,7 @@ def reference_audit(stmt, scn):
     return {'verdict': verdict, 'per_org': per} if stmt['disclosure'] == 'verdict+responsible' else {'verdict': verdict}
 
 
-# Thesis terminology (WRITING_CONTEXT E): the prototype and the vectors print 'complied'; a chain's rank 0 is
+# Thesis terminology: the prototype and the vectors print 'complied'; a chain's rank 0 is
 # 'fulfilled', a formula's is 'satisfied'.
 def thesis_word(v, formula=False):
     if v == 'complied':

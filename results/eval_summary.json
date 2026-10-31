@@ -154,7 +154,7 @@
   ],
   "aggregate_receipt": null
  },
- "D13_collusion": {
+ "coalition_limit": {
   "cases": 22,
   "as_predicted": 22,
   "accepted_cases": 8

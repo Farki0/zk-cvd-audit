@@ -8,7 +8,7 @@ checks is the part the protocol designs, the public outputs the auditor receives
   * view: under 'verdict, responsible' (Q3, Q5) the n+1 journals; under 'verdict' (Q1, Q2, Q4) the journal of the
     aggregation guest (agg-exec, executor);
   * simulator: rebuilds that view from pub(I) = (instance, participants, statement id, program id, published slice
-    commitments, each organisation's messages with partner and direction, D8) and out(S, I) (computed from the
+    commitments, each organisation's messages with partner and direction) and out(S, I) (computed from the
     semantics), with a placeholder for every hash value;
   * the view must equal the simulation field by field, the hash values must be 64 hex digits, and the hash values
     may be equal only where check 5 makes them equal (the two ends of one hand-off). Every other difference is

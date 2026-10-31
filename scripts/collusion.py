@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""The stated limit of decision D13, tested in both directions (executor + Rust auditor).
+"""The stated coalition limit (threat model of the thesis), tested in both directions (executor + Rust auditor).
 
-D13: a rewrite by the maintainer and a vendor goes through whenever the maintainer exchanged no message with an
+The limit: a rewrite by the maintainer and a vendor goes through whenever the maintainer exchanged no message with an
 honest party after that vendor's hand-off being rewritten; since the maintainer chooses the serving order, this is
 not restricted to a single vendor or to the time after the disclosure. The fixed vectors contain one case of each
 side (the single-vendor limit case, and the rewrite exposed by an honest vendor). This script enumerates:
@@ -14,7 +14,7 @@ side (the single-vendor limit case, and the rewrite exposed by an honest vendor)
 
 The honest vendors patch in time. The maintainer and the colluder recompute their chains and the heads they stored
 for each other (as audit_protocol.collude, generalised to any insertion point and any number of vendors); the
-honest vendors' slices stay as recorded. The prediction is computed from the D13 condition on record positions only,
+honest vendors' slices stay as recorded. The prediction is computed from the limit's condition on record positions only,
 without any hash: accepted iff no maintainer record with an honest peer follows the first maintainer record that
 stores a rewritten head of the colluder. The prototype's outcome (Q3, checks 1-7) must match the prediction, and
 an accepted rewrite must report the false verdict.
@@ -52,7 +52,7 @@ def rewrite(instance, slices, vendor, before):
 
 
 def predict(slices, vendor, inserted_at):
-    """D13 on positions: the first colluder message at or after the insertion point is the rewritten hand-off; the
+    """The limit on positions: the first colluder message at or after the insertion point is the rewritten hand-off; the
     maintainer's record of it is the first maintainer record that changes."""
     v_msgs = [r['msg'] for r, _ in slices[vendor].entries[inserted_at:] if 'msg' in r]
     m = [r for r, _ in slices['maintainer'].entries]
@@ -79,7 +79,7 @@ def main():
                     honest = {v: {'pre': [dict(PATCH)]} for v in vendors if v != colluder}
                     col = {} if target == 'disclosure' else {'mid': [{'type': 'mitigation'}]}
                     plans = {**honest, colluder: col}
-                    inst = f'D13-n{n}-p{pos}-{serve}-{target}'
+                    inst = f'COAL-n{n}-p{pos}-{serve}-{target}'
                     sl, parts = K.run_cvd(inst, plans, order=vendors, serve=serve)
                     honest_scn = K.scenario_of(inst + ' honest', inst, sl, parts)
                     before = K.host('exec-all', '--stmt', st['_path'], '--scenario', K.dump(honest_scn, f'{K.WORK}/d13/{inst}-0.json'))['audit']
@@ -109,7 +109,7 @@ def main():
            'accepted_cases_detail': [{k: r[k] for k in ('n', 'colluder_position', 'serve', 'rewrite_before')} for r in acc],
            'mode': 'zkVM executor + Rust auditor (checks 2-7)', 'rows': rows, 'seconds': round(time.time() - t0, 1)}
     K.dump(res, a.out)
-    print(f'{len(rows) - bad} of {len(rows)} collusion cases as D13 predicts; {len(acc)} accepted with a false verdict -> {a.out}')
+    print(f'{len(rows) - bad} of {len(rows)} collusion cases as the limit predicts; {len(acc)} accepted with a false verdict -> {a.out}')
     sys.exit(1 if bad else 0)
 
 

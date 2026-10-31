@@ -5,8 +5,8 @@ advisors Martin Farkas and Dr. Imre Kocsis). This directory is the prototype and
 the guest program of Algorithm 5.1 on RISC Zero 3.0.6 (CPU prover), the prover host, the auditor (checks 1-7),
 the aggregation guest and the scripts that produce every number of the chapter.
 
-* Concept DOI (all versions): `10.5281/zenodo.TODO` — fill in after the first Zenodo release.
-* Results tag (the version every reported number comes from): `TODO v1.0.0` — fill in when the release exists.
+* Version: 1.0.0 (`CITATION.cff`). Every reported number is read from a file in `results/`; the machine, toolchain
+  and guest image ids behind it are in `results/*env.json` (see the reproduction limits below).
 * Repository: https://github.com/Farki0/zk-cvd-audit
 
 ## Reproduce
@@ -37,7 +37,7 @@ WSL2 for the executor-only parts. The whole real-proof run was about 2 h 18 min 
 | EQ1 beyond the vectors (differential test, 120 + 30x15 inputs) | `python3 scripts/eq1_diff.py` | `eq1_diff.json` | minutes |
 | The eleven attacks, executor-only and with real proofs | `just tab-attacks`; `scripts/acceptance_prove.sh` | `attacks_exec.json`, `attacks_prove.json` | minutes; 1435 s |
 | EQ2 disclosure (view against simulation, 175 views) | `just tab-disclosure` | `eq2_disclosure.json`, `eq2_aggregate_prove.json` | minutes; +30 min with `--prove` |
-| Coalition limit (D13, 22 cases) | `just tab-coalition` | `collusion.json` | minutes |
+| Coalition limit (22 cases) | `just tab-coalition` | `collusion.json` | minutes |
 | Summary table of the three checks | `scripts/evaluate.sh` | `eval_summary.json` | 238 s |
 | Cycles against slice length (series A, C) and vendors (series B) | `just fig-scalability` | `cycles.csv`, `cycles_env.json` | minutes |
 | Cycles against monitor size and against record size | `scripts/cost_extra.py stmt record` | `cycles_statement_size.csv`, `cycles_record_size.csv` | minutes |
@@ -74,10 +74,10 @@ in the thesis repository; it writes `thesis/tables/*.tex` and `thesis/figures/da
   journal has a participant digest (at most 0.34 %, no padded cycles). A new measurement run with the current
   code replaces all of these numbers. An image id also depends on the build environment (the same code gave two ids on two
   machines), so the check across machines is the user-cycle count, not the id.
-* **Docker:** the image has no `.git`, so `env.json` records `git_commit: null` there; the results tag identifies the
-  version.
+* **Docker:** the image has no `.git`, so `env.json` records `git_commit: null` there; the version in `CITATION.cff` identifies
+  it.
 
 ## Cite
 
-Cite the concept DOI and name the results tag (Zenodo metadata: `.zenodo.json`, `CITATION.cff`).
+Cite the repository and its version (`CITATION.cff`; Zenodo metadata: `.zenodo.json`).
 License: MIT, see `LICENSE`.

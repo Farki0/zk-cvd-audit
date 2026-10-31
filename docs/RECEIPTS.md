@@ -1,6 +1,6 @@
 # Receipt kinds, zero knowledge and receipt size (RISC Zero 3.x)
 
-Answers the TODO of thesis section 5.4 for the prototype. Sources were read on 2026-10-12; quotes are from the
+Which receipt kind the prototype uses, and why. Sources were read on 2026-10-12; quotes are from the
 crate source of `risc0-zkvm 3.0.6` (the version this repository pins) unless a URL says otherwise.
 
 ## Which receipt kinds exist
@@ -12,7 +12,7 @@ crate source of `risc0-zkvm 3.0.6` (the version this repository pins) unless a U
 | `Groth16` | a single Groth16 SNARK over BN254, made by verifying a succinct receipt inside a Groth16 circuit | `ProverOpts::groth16()` |
 | `Fake` | "no cryptographic integrity, used only for development" (dev mode) | `RISC0_DEV_MODE` |
 
-This prototype uses succinct receipts on the protocol path (decision D11: acceptance with real proofs, sweeps A-D, the
+This prototype uses succinct receipts on the protocol path (acceptance with real proofs, sweeps A-D, the
 aggregate) and composite ones only in sweep K, for comparison. Groth16 is out of scope.
 
 ## Zero knowledge

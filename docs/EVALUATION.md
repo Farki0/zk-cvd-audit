@@ -19,16 +19,16 @@ Terminology: the prototype and the vectors print `complied`; the thesis writes *
 
 | Item | Before | Now |
 | --- | --- | --- |
-| Receipt kind on the protocol path | organisation proofs composite (acceptance, sweeps A-D), contrary to D11 | succinct everywhere on the protocol path; the auditor rejects any other kind at check 1; composite only in sweep K |
+| Receipt kind on the protocol path | organisation proofs composite (acceptance, sweeps A-D), contrary to the protocol | succinct everywhere on the protocol path; the auditor rejects any other kind at check 1; composite only in sweep K |
 | Aggregate receipt (mode *verdict*) | composite: carries the organisations' receipts (leak, confirmed with real proofs) | succinct; `agg` reports `leak` (assumption receipts embedded, journal bytes or digests readable); sweep D asserts no leak |
 | Aggregate journals against the vectors | only with real proofs, never run | also in the executor acceptance: 9/9 |
 | EQ1 beyond the 15 fixed pairs | none | `eq1_diff.py`, 1,467 runs |
 | EQ2 | argued field by field in the text | `eq2_disclosure.py`, a simulation check; two leaks found and fixed on 28 Oct (salted genesis head; no verdict while open) |
-| D13 (collusion limit) | the model showed the single-vendor case | `collusion.py`: 22 cases, all as D13 predicts |
+| Coalition limit | the model showed the single-vendor case | `collusion.py`: 22 cases, all as predicted |
 | Baseline, monitor size, record size | missing | `cost_extra.py` |
 | Control id of succinct receipts | a one-segment receipt named the lift program of its size | the prover splits a one-segment slice into two, so every organisation receipt ends with `join.zkr` (the aggregate with `resolve.zkr`); the auditor checks this at check 1 |
 | Image ids, run environment | missing next to `cycles.csv` | `results/cycles_env.json`; `runs/eval-*/env.json` |
-| Tables 6.1-6.3, Figures 6.1-6.2 | hand-typed in WRITING_CONTEXT L | generated from `results/`; time/verification table and panels appear once `results/measurements*.csv` exist |
+| Tables 6.1-6.3, Figures 6.1-6.2 | typed by hand | generated from `results/`; time/verification table and panels appear once `results/measurements*.csv` exist |
 
 ## EQ1: correctness
 
@@ -63,8 +63,8 @@ data atoms are well typed only. On ill-typed comparisons (`coverage < "z"`, `= 3
 `scripts/eq2_disclosure.py` -> `results/eq2_disclosure.json`. A structural check of the public outputs, i.e. of the
 deterministic part of Definition 3.11 (the proofs' own zero knowledge is assumption A4 and is not tested; neither are
 the distribution of the hash values, timing, nor what several audits reveal together). The script builds the
-simulator: pub(I) is the instance, participants, statement id, program id, published slice commitments and the message
-log of D8, recorded at the hand-offs and not read from the slices (for the vectors' scenarios it follows from their
+simulator: pub(I) is the instance, participants, statement id, program id, published slice commitments and the public
+message log, recorded at the hand-offs and not read from the slices (for the vectors' scenarios it follows from their
 fixed choreography); out(S, I) is computed from the semantics; every hash value is a placeholder. The view (ν+1
 journals under *verdict, responsible*; the aggregation guest's journal under *verdict*) must equal the simulation field
 by field; no hash value may equal one computable from pub(I), and hash values may be equal only where check 5 pairs
@@ -104,12 +104,12 @@ limit so that it becomes two (one extra join); the auditor rejects at check 1 an
 by `join.zkr` and any aggregate not finished by `resolve.zkr`; `bench.py` records `control_id` and
 `control_program`. Not yet confirmed with real proofs: `acceptance_prove.sh` and sweep K do that.
 
-## The D13 limit
+## The coalition limit
 
 `scripts/collusion.py` -> `results/collusion.json`. ν = 1, 2, 3 vendors, the colluding vendor in every serving
 position, two schedules (phased as in vectors.py; per-vendor: disclosure and grace_end of one vendor before the next),
 two rewrites (a patch inserted before the disclosure: violated -> fulfilled; before the grace_end after a mitigation:
-violated -> repaired). The prediction comes from the D13 condition on record positions alone (no hashing): accepted
+violated -> repaired). The prediction comes from the limit's condition on record positions alone (no hashing): accepted
 iff no maintainer message with an honest party follows the first maintainer record that stores a rewritten head.
 
 22/22 cases as predicted; 8 accepted with the false verdict, 14 rejected at check 5 through an honest vendor.
@@ -134,9 +134,8 @@ per-vendor schedule, before the grace_end under both. A consistency test of one 
   (L = 2048), the Python reference guest 0.1-13 ms, the zkVM executor 0.06-0.38 s. The overhead factor of proving needs
   `prove_s` of the same machine.
 
-## Still open
+## Real proofs and scope
 
-* Real proofs, hours (MEASURE.md): `acceptance_prove.sh` (the "Real proofs" columns, now `[TBD]`), then `bench.py K A B D C`
-  (times, memory, receipt sizes, verification and audit time; D11's succinct size).
-* Author's decisions: typing of Definition 3.1; whether the message log of D8 is
-  published by someone (the simulator assumes it is part of pub(I)).
+* Real proofs (MEASURE.md): `acceptance_prove.sh` -> `results/accept_prove.json`, `results/attacks_prove.json`;
+  `bench.py K C B D A` -> `results/measurements*.csv` (times, memory, receipt sizes, verification and audit time).
+* The EQ2 simulator takes the public message log as part of pub(I).

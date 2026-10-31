@@ -160,7 +160,7 @@ fn builder<'a>() -> risc0_zkvm::ExecutorEnvBuilder<'a> {
     b
 }
 
-/// The receipt kind of the protocol (D11): a composite receipt holds one proof per segment, so its size reveals the
+/// The receipt kind of the protocol: a composite receipt holds one proof per segment, so its size reveals the
 /// slice length; the auditor accepts only succinct receipts (check 1).
 pub const PROTOCOL_KIND: &str = "succinct";
 
@@ -408,7 +408,7 @@ impl Engine {
     }
 }
 
-// ----------------------------------------------------------------------------- auditor (C5)
+// ----------------------------------------------------------------------------- auditor
 
 fn rej<T>(check: u8, reason: &str) -> Result<T, Reject> { Err(Reject { check, reason: reason.into() }) }
 
@@ -434,9 +434,9 @@ pub fn check_4(instance: &str, heads: &BTreeMap<String, String>, published: &BTr
 
 fn verified(r: &Receipt, id: [u32; 8]) -> bool { receipt_kind(r) != "FAKE" && r.verify(id).is_ok() }
 
-/// Check 1 also requires the protocol's receipt kind (D11).
+/// Check 1 also requires the protocol's receipt kind.
 fn check_kind(r: &Receipt, program: &str) -> Result<(), Reject> {
-    if receipt_kind(r) != PROTOCOL_KIND { return rej(1, "receipt is not succinct (a composite receipt reveals its segment count, D11)"); }
+    if receipt_kind(r) != PROTOCOL_KIND { return rej(1, "receipt is not succinct (a composite receipt reveals its segment count)"); }
     // the control id must name a program whose identity does not depend on the slice length (see prove_org)
     if control_program(r) != Some(program) { return rej(1, "succinct receipt not finished by the expected recursion program (a lift program reveals the segment size)"); }
     Ok(())

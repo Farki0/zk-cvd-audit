@@ -15,7 +15,7 @@ build:
 smoke:
     scripts/reproduce.sh --smoke
 
-# the evaluation without proofs: EQ1, EQ2, D13, cycle counts -> results/
+# the evaluation without proofs: EQ1, EQ2, coalition limit, cycle counts -> results/
 reproduce:
     scripts/reproduce.sh
 
@@ -38,7 +38,7 @@ tab-attacks:
 tab-disclosure:
     python3 scripts/eq2_disclosure.py
 
-# Table: the coalition limit (D13)
+# Table: the coalition limit
 tab-coalition:
     python3 scripts/collusion.py
 

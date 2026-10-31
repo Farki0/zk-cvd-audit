@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# The same acceptance tests with real proofs (succinct receipts, the protocol's kind (D11); receipts are verified by the auditor, the
+# The same acceptance tests with real proofs (succinct receipts, the protocol's kind; receipts are verified by the auditor, the
 # aggregation guest is proved for the 'verdict' statements).
 # Usage: scripts/acceptance_prove.sh [--full] [run-dir]   (re-using a run-dir resumes: proofs are cached in <run-dir>/cache)
 #   default (short, about 3 h on the author's machine): scenario S1 under Q1-Q5 (20 organisation proofs, the 3

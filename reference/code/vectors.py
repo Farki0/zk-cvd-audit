@@ -8,7 +8,7 @@ tables, the same public outputs (journals), the same auditor decisions.
     python3 vectors.py golden  OUTDIR                      # statements, 3 scenarios, attack cases, hash examples
     python3 vectors.py scenario --vendors N --length L --out FILE [--no-close]
 
-Formats are described in PROTOTYPE_SPEC.md, section 3.
+The formats are those of the prototype (core/src/lib.rs).
 """
 from __future__ import annotations
 import argparse, copy, json, os, sys

@@ -3,7 +3,7 @@
 # and of the Docker image).
 #
 #   scripts/reproduce.sh --smoke     build + executor-only acceptance (EQ1 vectors, 11 attacks, limit case). Minutes.
-#   scripts/reproduce.sh             the whole evaluation without proofs (EQ1, EQ2, EQ3 cycle counts, D13). About 10 min.
+#   scripts/reproduce.sh             the whole evaluation without proofs (EQ1, EQ2, EQ3 cycle counts, coalition limit). About 10 min.
 #   scripts/reproduce.sh --prove     the above, then real proofs: the acceptance with proofs (about 3 h) and the sweeps
 #                                    of the short plan (about 9 h). Needs a 16 GB machine; see docs/ARTIFACT.md.
 #

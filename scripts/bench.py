@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""C8: benchmark runner for the sweeps of PROTOTYPE_SPEC.md section 5.3 / 5.4.
+"""Benchmark runner for the proving-time sweeps of the evaluation.
 
   scripts/bench.py --dry-run A B C D K     print the planned runs and the time estimate (no proving)
   scripts/bench.py A                       run sweep A (resumable: rows already in the CSV are skipped)
@@ -103,7 +103,7 @@ def run(args, extra_env=None):
 def estimate(q, scn, org, variant, kind, a):
     """Planned proving time of one proof: padded cycles x --sec-per-mcycle, and for a succinct receipt one recursion
     proof (lift or join) per segment and per join, x --recursion-s. The segments are those prove_org proves: a slice
-    that fits one segment is executed again with half the segment limit, as prove_org does (control id, D11)."""
+    that fits one segment is executed again with half the segment limit, as prove_org does (control id)."""
     args = ['exec', '--stmt', stmt(q), '--scenario', scn, '--org', org, '--variant', variant]
     m = json.loads(run(args)[0])
     if kind == 'succinct' and m['segments'] == 1:
@@ -150,7 +150,7 @@ class Store:
 
 
 def reps_for(est_s, a):
-    """(warm-up, repetitions) of a point from the estimate of one proof. Long plan (spec 5.3): warm-up + 5
+    """(warm-up, repetitions) of a point from the estimate of one proof. Long plan: warm-up + 5
     repetitions, no warm-up and 3 repetitions over 10 minutes. Short plan: warm-up + 3 repetitions up to 10 minutes,
     3 repetitions without warm-up up to 30 minutes, one run above."""
     warm = 1 if est_s <= (a.large_secs if a.warmup_secs is None else a.warmup_secs) else 0
@@ -166,7 +166,7 @@ def plan(sweeps, a):
         """warm_orgs: the organisations proved in the warm-up (default all; sweep B: one vendor, no audit).
         scn: a scenario file made by the caller (sweep E); by default the one of (n, L)."""
         scn = scn or scenario(n, L)
-        ests = {o: estimate(q, scn, o, variant, kind, a) for o in orgs}          # succinct = the protocol's kind (D11)
+        ests = {o: estimate(q, scn, o, variant, kind, a) for o in orgs}          # succinct = the protocol's kind
         warm, reps = reps_for(max(ests.values()), a)
         if force:                         # (warm-up, repetitions); None keeps the value from the estimate
             warm, reps = (warm if force[0] is None else force[0]), (reps if force[1] is None else force[1])
@@ -223,7 +223,7 @@ def prove(j):
     txt, wall, rss = run(args)
     m = json.loads(txt.strip().splitlines()[-1])
     m.update(peak_rss_mb=round(rss, 1), wall_s=round(wall, 2))
-    # the protocol's receipt (D11): succinct and finished by join.zkr (prove_org splits a one-segment slice); a row of
+    # the protocol's receipt: succinct and finished by join.zkr (prove_org splits a one-segment slice); a row of
     # another kind or recursion program would not measure the protocol, so stop before it is recorded
     if m['receipt_kind'] != j['kind'] or (j['kind'] == 'succinct' and m['control_program'] != 'join.zkr'):
         raise RuntimeError(f'{j["sweep"]} {j["q"]} n={j["n"]} L={j["L"]} {j["org"]}: requested {j["kind"]}, got '
@@ -301,7 +301,7 @@ def execute(groups, st, a):
 
 
 # Presets (--plan); an option given on the command line overrides the preset. 'short' is the default
-# (MEASURE.md: about 9 h on the author's machine), 'long' the full plan of PROTOTYPE_SPEC 5.3 (about 46 h).
+# (MEASURE.md: about 9 h on the author's machine), 'long' the full plan (about 46 h).
 PLANS = {
     'short': dict(reps=3, reps_large=1, large_secs=1800, warmup_secs=600, A_lengths=[8, 32, 128, 512, 2048],
                   A_stmts=['Q2'], B_reps=1, B_warmup='once', C_lengths=[128], K_lengths=[128], D_reps=1, D_vendors=[2, 8],

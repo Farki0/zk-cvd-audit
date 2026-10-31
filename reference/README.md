@@ -1,6 +1,6 @@
 # reference/
 
-Copied unchanged from the reference package of the thesis (2026-10-12); nothing here is edited.
+Copied from the reference package of the thesis (2026-10-12); the code is unchanged apart from one comment.
 
 | Here | Copied from | What it is |
 | --- | --- | --- |

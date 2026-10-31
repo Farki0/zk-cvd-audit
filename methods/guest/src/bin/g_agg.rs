@@ -1,4 +1,4 @@
-//! Aggregation guest program (C7, mode "verdict"): verifies the organisations' receipts inside the zkVM
+//! Aggregation guest program (mode "verdict"): verifies the organisations' receipts inside the zkVM
 //! (as assumptions), runs checks 2, 3, 5, 6, 7 on their journals and outputs only the heads and the verdict.
 use audit_core::{check_2_3, check_5_6_7, hex, pdigest, statement_id, AggJournal, Journal};
 use risc0_zkvm::guest::env;

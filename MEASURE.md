@@ -32,7 +32,7 @@ Memory: about 2.5 GB for L <= 128, more for long slices (the largest point is th
 ## 2. Commands, in this order
 
 ```bash
-scripts/evaluate.sh                         # ~10 min CPU. Acceptance (executor), EQ1/EQ2/D13 checks, cycles; must end
+scripts/evaluate.sh                         # ~10 min CPU. Acceptance (executor), EQ1/EQ2/coalition checks, cycles; must end
                                             # with "EVALUATION (no proofs) PASSED". Compare runs/eval-*/env.json
                                             # guest_image_ids with results/cycles_env.json: different ids = different
                                             # guest binaries, so the cycle counts of the repo do not apply
@@ -50,8 +50,8 @@ python3 scripts/bench.py A                  # Q2, L = 8..512 (3 repetitions), L 
 
 The short plan: Q2 only in A (Q4 is a formula of the same cost class, see `results/cycles.csv`); 3 repetitions, with
 a warm-up only for points estimated under 10 minutes, one run for points over 30 minutes (L = 2048); B and D one
-repetition each, B with a single warm-up of one vendor for the whole sweep; C and K at L = 128 only. The long plan of
-the spec (Q2 and Q4, 5 repetitions, C and K also at L = 2048/512, D also at nu = 16, about 45 h) is `--plan long`:
+repetition each, B with a single warm-up of one vendor for the whole sweep; C and K at L = 128 only. The long plan
+(Q2 and Q4, 5 repetitions, C and K also at L = 2048/512, D also at nu = 16, about 45 h) is `--plan long`:
 
 ```bash
 python3 scripts/bench.py --plan long K
@@ -72,14 +72,14 @@ lift per segment, one join per pair). Pass both to `--dry-run`. Changing them ca
 (see below), so use the same values for every later command.
 
 Repetitions (`--reps`, `--reps-large`, `--large-secs`, `--warmup-secs`, `--B-reps`, `--B-warmup`, `--D-reps`; any of
-them overrides the preset): long plan as the spec, one discarded warm-up plus 5 repetitions per point, no warm-up and
+them overrides the preset): long plan: one discarded warm-up plus 5 repetitions per point, no warm-up and
 3 repetitions when one proof is estimated over 10 minutes, D 3 repetitions; the warm-up of a B point proves one vendor
 only. Short plan as above.
 
 ## 3. Expected duration
 
 **Receipt kind (2026-10-26).** Every organisation proof of the acceptance and of sweeps A-D is now a *succinct*
-receipt, the protocol's kind (D11): the auditor rejects composite receipts at check 1, and the aggregate of sweep D is
+receipt, the protocol's kind: the auditor rejects composite receipts at check 1, and the aggregate of sweep D is
 succinct too (a composite aggregate carries the organisations' receipts, see docs/EVALUATION.md). Succinct proving
 adds the recursion (one lift per segment, one join per pair, one resolve per assumption); the dry run includes it
 since 2026-10-28. On the development machine the S1 aggregate took 755 s as composite and 1,060 s as succinct; one

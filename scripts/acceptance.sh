@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Executor-only acceptance tests (PROTOTYPE_SPEC.md section 4): hash examples, 55 journals, 15 audit outputs,
+# Executor-only acceptance tests: hash examples, 55 journals, 15 audit outputs,
 # 11 attacks and the limit case. The guest runs in the zkVM executor, no proofs are made (minutes, not hours).
 # Usage: scripts/acceptance.sh        Exit status 0 iff everything matches.
 set -euo pipefail

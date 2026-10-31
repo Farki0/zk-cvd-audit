@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# The whole evaluation that needs no proving (EQ1, EQ2, the D13 limit, the executor part of EQ3).
+# The whole evaluation that needs no proving (EQ1, EQ2, the coalition limit, the executor part of EQ3).
 # Real proofs and timings are separate and take hours: acceptance_prove.sh and bench.py (MEASURE.md).
 #   scripts/evaluate.sh            -> runs/eval-<date>/ (env.json, logs), results/*.json|csv, summary results/eval_summary.json
 #   scripts/evaluate.sh --prove    -> additionally the aggregate-receipt check of EQ2 with real proofs (S1, Q2; ~1 h)
@@ -53,7 +53,7 @@ s = {'run': run, 'env': json.load(open(f'{run}/env.json')), 'parts': st,
      'EQ1_differential': e1 and {k: e1[k] for k in ('runs', 'journals_compared', 'vendor_verdicts_compared', 'audits_compared', 'mismatches', 'by_part')},
      'EQ2': e2 and {k: e2.get(k) for k in ('views_checked', 'views_equal_to_simulation', 'findings_by_class', 'views_by_class',
                                            'journal_size_constant_less_instance_id', 'pairs', 'aggregate_receipt')},
-     'D13_collusion': c and {k: c[k] for k in ('cases', 'as_predicted', 'accepted_cases')}}
+     'coalition_limit': c and {k: c[k] for k in ('cases', 'as_predicted', 'accepted_cases')}}
 json.dump(s, open('results/eval_summary.json', 'w'), indent=1); json.dump(s, open(f'{run}/eval_summary.json', 'w'), indent=1)
 print(json.dumps({k: v for k, v in s.items() if k != 'env'}, indent=1))
 PY

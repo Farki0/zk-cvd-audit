@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this artifact, cite the paper and this archive (concept DOI, and the results tag)."
+message: "If you use this artifact, cite the paper and this repository (with its version)."
 title: "Artifact for: Retrospective Auditing of Cross-Organizational Processes with Zero-Knowledge Proofs"
 type: software
 version: 1.0.0
@@ -8,7 +8,6 @@ authors:
     given-names: Ádám
     affiliation: "Budapest University of Technology and Economics"
 repository-code: "https://github.com/Farki0/zk-cvd-audit"
-# doi: 10.5281/zenodo.TODO   # concept DOI: fill in after the first Zenodo release
 license: MIT
 keywords:
   - zero-knowledge proofs
