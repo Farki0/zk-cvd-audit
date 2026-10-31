@@ -1,0 +1,183 @@
+{
+  "failures": 0,
+  "real_proofs": true,
+  "rows": [
+    {
+      "expected": {
+        "reason": "interface: heads at the hand-off do not match (history rewritten around a message)",
+        "rejected_by": "auditor"
+      },
+      "expected_check": "5 (and 4)",
+      "got": {
+        "check": 4,
+        "rejected_by": "auditor"
+      },
+      "name": "patch back-dated after closure",
+      "pass": true,
+      "reason": "proof is not about the slice it committed to at closure"
+    },
+    {
+      "expected": {
+        "reason": "interface: heads at the hand-off do not match (history rewritten around a message)",
+        "rejected_by": "auditor"
+      },
+      "expected_check": "5",
+      "got": {
+        "check": 5,
+        "rejected_by": "auditor"
+      },
+      "name": "patch back-dated before closure, rewritten head published",
+      "pass": true,
+      "reason": "interface: heads at the hand-off do not match (history rewritten around a message)"
+    },
+    {
+      "expected": {
+        "reason": "interface: heads at the hand-off do not match (history rewritten around a message)",
+        "rejected_by": "auditor"
+      },
+      "expected_check": "5, through an honest vendor",
+      "got": {
+        "check": 5,
+        "rejected_by": "auditor"
+      },
+      "name": "maintainer and vendor rewrite together",
+      "pass": true,
+      "reason": "interface: heads at the hand-off do not match (history rewritten around a message)"
+    },
+    {
+      "expected": {
+        "reason": "interface: a message is missing on one side",
+        "rejected_by": "auditor"
+      },
+      "expected_check": "5",
+      "got": {
+        "check": 5,
+        "rejected_by": "auditor"
+      },
+      "name": "received message dropped",
+      "pass": true,
+      "reason": "interface: a message is missing on one side"
+    },
+    {
+      "expected": {
+        "reason": "record type or peer does not match the interface commitment",
+        "rejected_by": "guest"
+      },
+      "expected_check": "guest: interface commitment",
+      "got": {
+        "rejected_by": "guest"
+      },
+      "name": "disclosure relabelled as another message kind",
+      "pass": true,
+      "reason": "Guest panicked: abort: record type or peer does not match the interface commitment"
+    },
+    {
+      "expected": {
+        "reason": "record type or peer does not match the interface commitment",
+        "rejected_by": "guest"
+      },
+      "expected_check": "guest: interface commitment",
+      "got": {
+        "rejected_by": "guest"
+      },
+      "name": "proof over another vendor's records",
+      "pass": true,
+      "reason": "Guest panicked: abort: record type or peer does not match the interface commitment"
+    },
+    {
+      "expected": {
+        "reason": "check 4: vendorA: proof is not about the slice it committed to at closure",
+        "rejected_by": "auditor"
+      },
+      "expected_check": "4",
+      "got": {
+        "check": 4,
+        "rejected_by": "auditor"
+      },
+      "name": "record appended after closure",
+      "pass": true,
+      "reason": "proof is not about the slice it committed to at closure"
+    },
+    {
+      "expected": {
+        "reason": "wrong statement or instance",
+        "rejected_by": "auditor"
+      },
+      "expected_check": "2",
+      "got": {
+        "check": 2,
+        "rejected_by": "auditor"
+      },
+      "name": "proof for an easier statement",
+      "pass": true,
+      "reason": "wrong statement or instance"
+    },
+    {
+      "expected": {
+        "reason": "full participation fails: the provers are not exactly the participant set",
+        "rejected_by": "auditor"
+      },
+      "expected_check": "3",
+      "got": {
+        "check": 3,
+        "rejected_by": "auditor"
+      },
+      "name": "one participant withholds its proof",
+      "pass": true,
+      "reason": "full participation fails: the provers are not exactly the participant set"
+    },
+    {
+      "expected": {
+        "reason": "a shared event was recorded without a hand-off",
+        "rejected_by": "guest"
+      },
+      "expected_check": "guest: no link",
+      "got": {
+        "rejected_by": "guest"
+      },
+      "name": "local disclosure inserted before an early advisory",
+      "pass": true,
+      "reason": "Guest panicked: abort: a shared event was recorded without a hand-off"
+    },
+    {
+      "expected": {
+        "reason": "message kind not allowed between these roles",
+        "rejected_by": "guest"
+      },
+      "expected_check": "guest: roles",
+      "got": {
+        "rejected_by": "guest"
+      },
+      "name": "disclosure sent by a vendor",
+      "pass": true,
+      "reason": "Guest panicked: abort: message kind not allowed between these roles"
+    },
+    {
+      "expected": {
+        "accepted": {
+          "per_org": {
+            "vendorC": "complied"
+          },
+          "verdict": "complied"
+        }
+      },
+      "expected_check": null,
+      "got": {
+        "accepted": {
+          "per_org": {
+            "vendorC": "complied"
+          },
+          "verdict": "complied"
+        }
+      },
+      "name": "single vendor colludes with the maintainer (known limit: accepted)",
+      "pass": true,
+      "reason": ""
+    },
+    {
+      "expected_check": "1",
+      "name": "receipt of another guest program (extra)",
+      "pass": true
+    }
+  ]
+}

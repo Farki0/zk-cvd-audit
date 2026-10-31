@@ -1,0 +1,10 @@
+sweep,rep,statement,n,L,mode,audit_s,receipts
+B,1,Q3,1,32,per-org,0.023125001,2
+B,1,Q3,2,32,per-org,0.034122459,3
+B,1,Q3,4,32,per-org,0.055751541,5
+B,1,Q3,8,32,per-org,0.098235806,9
+B,1,Q3,16,32,per-org,0.185566171,17
+D,1,Q2,2,32,aggregate,0.011050329,1
+D,1,Q2,2,32,per-org,0.032601379,3
+D,1,Q2,8,32,aggregate,0.011184536,1
+D,1,Q2,8,32,per-org,0.097701951,9

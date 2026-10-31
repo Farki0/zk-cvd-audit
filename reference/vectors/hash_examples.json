@@ -1,0 +1,13 @@
+{
+ "H('a')": "72ff6b02949dad95006c343e3db3150090d3afb49f6bbdb92fdc17607997a85c",
+ "H('a','bc')": "b534ce16ac9c8b36823f39a395ce8e0e3c7ad9605b82b5444f18cadacd217a5d",
+ "H('ab','c')": "f2939f903016e5bb29b1e4a61cdbd376220ca03a24180b39995f2d50f2e0a647",
+ "commit = H('rec', salt, enc(record))": "22be5255cb86625d59cf2e37f231430724944cc9a9932a14cb9a99ff715ba012",
+ "enc(record)": "{\"coverage\":\"full\",\"type\":\"patch\"}",
+ "genesis = H('slice', 'CVD-2026-0001', 'vendorA', salt0)": "c8ef3885ebc1d419599b24832b2a25bd6adbcc1399c6516bd5449d65441834c4",
+ "iface = H('iface','I','maintainer','vendorA','disclosure', nonce='n', H('body',''))": "e63070727c3b96b43bf4754666f1ecec0638f83be7c16a6ee5f78664e0ab3705",
+ "link = H('link', genesis, commit)": "77ba4e7a4a42364285a21d518281cb7e52b5eb309eef90811a04a30089ce027a",
+ "pdigest({'maintainer':'maintainer','vendorA':'vendor'})": "cd6c5cf41791ca0e60be7ecd60d1f973b3df254f48c3726e352904d951246227",
+ "salt": "9ab2d29c7837b1a63dc7a9c9596bff520099be61952bf8e39e08042fec81e413",
+ "salt0 = H('salt0', 'example')": "58a5ec52e6fde03372bbb994ce85bd20327df0f2f8291fce865b7a08171d0b02"
+}

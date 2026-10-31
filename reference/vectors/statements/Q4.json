@@ -1,0 +1,73 @@
+{
+ "canonical": "{\"disclosure\":\"verdict\",\"name\":\"Q4\",\"norms\":[{\"atoms\":[{\"pred\":[],\"type\":\"ack\"},{\"pred\":[],\"type\":\"notify\"}],\"delta\":[[1,1,2],[1,1,2],[2,1,2]],\"init\":0,\"kind\":\"formula\",\"letter_of_mask\":[0,1,2,-1],\"letters\":[[\"other\"],[\"ack\"],[\"notify\"]],\"m\":0,\"name\":\"ack\",\"out\":[[1,true],[0,true],[1,true]]}],\"role\":\"vendor\"}",
+ "disclosure": "verdict",
+ "id": "01e79f3d3c8b8cc86638643930ee5d98d718e9e5611d5af3e6c6e988f08ddf92",
+ "name": "Q4",
+ "norms": [
+  {
+   "atoms": [
+    {
+     "pred": [],
+     "type": "ack"
+    },
+    {
+     "pred": [],
+     "type": "notify"
+    }
+   ],
+   "delta": [
+    [
+     1,
+     1,
+     2
+    ],
+    [
+     1,
+     1,
+     2
+    ],
+    [
+     2,
+     1,
+     2
+    ]
+   ],
+   "init": 0,
+   "kind": "formula",
+   "letter_of_mask": [
+    0,
+    1,
+    2,
+    -1
+   ],
+   "letters": [
+    [
+     "other"
+    ],
+    [
+     "ack"
+    ],
+    [
+     "notify"
+    ]
+   ],
+   "m": 0,
+   "name": "ack",
+   "out": [
+    [
+     1,
+     true
+    ],
+    [
+     0,
+     true
+    ],
+    [
+     1,
+     true
+    ]
+   ]
+  }
+ ],
+ "role": "vendor"
+}

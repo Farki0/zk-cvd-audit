@@ -1,0 +1,80 @@
+{
+ "canonical": "{\"disclosure\":\"verdict+responsible\",\"name\":\"Q5\",\"norms\":[{\"atoms\":[{\"pred\":[],\"type\":\"patch\"},{\"pred\":[[\"coverage\",\"=\",\"full\"]],\"type\":\"patch\"}],\"delta\":[[1,2,1],[1,2,1],[2,2,2]],\"init\":0,\"kind\":\"formula\",\"letter_of_mask\":[0,1,-1,2],\"letters\":[[\"other\"],[\"patch\"],[\"patch\",\"patch[coverage=full]\"]],\"m\":0,\"name\":\"cover\",\"out\":[[1,true],[0,true],[1,true]]}],\"role\":\"vendor\"}",
+ "disclosure": "verdict+responsible",
+ "id": "672c0d263bcf757ef334482db60a26336d7ce19a19980ae35d89bbb2dbdbd04c",
+ "name": "Q5",
+ "norms": [
+  {
+   "atoms": [
+    {
+     "pred": [],
+     "type": "patch"
+    },
+    {
+     "pred": [
+      [
+       "coverage",
+       "=",
+       "full"
+      ]
+     ],
+     "type": "patch"
+    }
+   ],
+   "delta": [
+    [
+     1,
+     2,
+     1
+    ],
+    [
+     1,
+     2,
+     1
+    ],
+    [
+     2,
+     2,
+     2
+    ]
+   ],
+   "init": 0,
+   "kind": "formula",
+   "letter_of_mask": [
+    0,
+    1,
+    -1,
+    2
+   ],
+   "letters": [
+    [
+     "other"
+    ],
+    [
+     "patch"
+    ],
+    [
+     "patch",
+     "patch[coverage=full]"
+    ]
+   ],
+   "m": 0,
+   "name": "cover",
+   "out": [
+    [
+     1,
+     true
+    ],
+    [
+     0,
+     true
+    ],
+    [
+     1,
+     true
+    ]
+   ]
+  }
+ ],
+ "role": "vendor"
+}

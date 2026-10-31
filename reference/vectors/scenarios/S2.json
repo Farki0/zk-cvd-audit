@@ -1,0 +1,953 @@
+{
+ "behaviour": {
+  "vendorA": "leak",
+  "vendorB": "complied"
+ },
+ "closed": true,
+ "expected": {
+  "Q1": {
+   "aggregate_journal": {
+    "heads": {
+     "maintainer": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+     "vendorA": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+     "vendorB": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0"
+    },
+    "instance": "CVD-2026-0002",
+    "sid": "ff6c0c5137469e644e3ad12a637ae97ab8b458d67d3f98f468be04ce056095a3",
+    "verdict": "violated"
+   },
+   "audit": {
+    "verdict": "violated"
+   },
+   "journals": {
+    "maintainer": {
+     "head": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+     "iface": [
+      {
+       "dir": "send",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791",
+       "peer": "vendorA",
+       "peer_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a"
+      },
+      {
+       "dir": "recv",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445",
+       "peer": "vendorA",
+       "peer_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e"
+      },
+      {
+       "dir": "send",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7",
+       "peer": "vendorB",
+       "peer_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046"
+      },
+      {
+       "dir": "recv",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5",
+       "peer": "vendorB",
+       "peer_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58"
+      },
+      {
+       "dir": "send",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2",
+       "peer": "vendorA",
+       "peer_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1"
+      },
+      {
+       "dir": "send",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041",
+       "peer": "vendorB",
+       "peer_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37"
+      },
+      {
+       "dir": "send",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee",
+       "peer": "vendorA",
+       "peer_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0"
+      },
+      {
+       "dir": "send",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920",
+       "peer": "vendorB",
+       "peer_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "maintainer",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "ff6c0c5137469e644e3ad12a637ae97ab8b458d67d3f98f468be04ce056095a3",
+     "verdict": null
+    },
+    "vendorA": {
+     "head": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a",
+       "peer": "maintainer",
+       "peer_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791"
+      },
+      {
+       "dir": "send",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e",
+       "peer": "maintainer",
+       "peer_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445"
+      },
+      {
+       "dir": "recv",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1",
+       "peer": "maintainer",
+       "peer_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2"
+      },
+      {
+       "dir": "recv",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0",
+       "peer": "maintainer",
+       "peer_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorA",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "ff6c0c5137469e644e3ad12a637ae97ab8b458d67d3f98f468be04ce056095a3",
+     "verdict": "violated"
+    },
+    "vendorB": {
+     "head": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046",
+       "peer": "maintainer",
+       "peer_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7"
+      },
+      {
+       "dir": "send",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58",
+       "peer": "maintainer",
+       "peer_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5"
+      },
+      {
+       "dir": "recv",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37",
+       "peer": "maintainer",
+       "peer_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041"
+      },
+      {
+       "dir": "recv",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd",
+       "peer": "maintainer",
+       "peer_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorB",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "ff6c0c5137469e644e3ad12a637ae97ab8b458d67d3f98f468be04ce056095a3",
+     "verdict": "complied"
+    }
+   }
+  },
+  "Q2": {
+   "aggregate_journal": {
+    "heads": {
+     "maintainer": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+     "vendorA": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+     "vendorB": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0"
+    },
+    "instance": "CVD-2026-0002",
+    "sid": "450928a828e882896566936ec3c0652d2fcfa47c2d6f42717103098cd457b968",
+    "verdict": "complied"
+   },
+   "audit": {
+    "verdict": "complied"
+   },
+   "journals": {
+    "maintainer": {
+     "head": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+     "iface": [
+      {
+       "dir": "send",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791",
+       "peer": "vendorA",
+       "peer_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a"
+      },
+      {
+       "dir": "recv",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445",
+       "peer": "vendorA",
+       "peer_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e"
+      },
+      {
+       "dir": "send",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7",
+       "peer": "vendorB",
+       "peer_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046"
+      },
+      {
+       "dir": "recv",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5",
+       "peer": "vendorB",
+       "peer_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58"
+      },
+      {
+       "dir": "send",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2",
+       "peer": "vendorA",
+       "peer_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1"
+      },
+      {
+       "dir": "send",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041",
+       "peer": "vendorB",
+       "peer_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37"
+      },
+      {
+       "dir": "send",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee",
+       "peer": "vendorA",
+       "peer_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0"
+      },
+      {
+       "dir": "send",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920",
+       "peer": "vendorB",
+       "peer_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "maintainer",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "450928a828e882896566936ec3c0652d2fcfa47c2d6f42717103098cd457b968",
+     "verdict": null
+    },
+    "vendorA": {
+     "head": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a",
+       "peer": "maintainer",
+       "peer_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791"
+      },
+      {
+       "dir": "send",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e",
+       "peer": "maintainer",
+       "peer_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445"
+      },
+      {
+       "dir": "recv",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1",
+       "peer": "maintainer",
+       "peer_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2"
+      },
+      {
+       "dir": "recv",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0",
+       "peer": "maintainer",
+       "peer_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorA",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "450928a828e882896566936ec3c0652d2fcfa47c2d6f42717103098cd457b968",
+     "verdict": "complied"
+    },
+    "vendorB": {
+     "head": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046",
+       "peer": "maintainer",
+       "peer_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7"
+      },
+      {
+       "dir": "send",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58",
+       "peer": "maintainer",
+       "peer_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5"
+      },
+      {
+       "dir": "recv",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37",
+       "peer": "maintainer",
+       "peer_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041"
+      },
+      {
+       "dir": "recv",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd",
+       "peer": "maintainer",
+       "peer_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorB",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "450928a828e882896566936ec3c0652d2fcfa47c2d6f42717103098cd457b968",
+     "verdict": "complied"
+    }
+   }
+  },
+  "Q3": {
+   "audit": {
+    "per_org": {
+     "vendorA": "complied",
+     "vendorB": "complied"
+    },
+    "verdict": "complied"
+   },
+   "journals": {
+    "maintainer": {
+     "head": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+     "iface": [
+      {
+       "dir": "send",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791",
+       "peer": "vendorA",
+       "peer_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a"
+      },
+      {
+       "dir": "recv",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445",
+       "peer": "vendorA",
+       "peer_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e"
+      },
+      {
+       "dir": "send",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7",
+       "peer": "vendorB",
+       "peer_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046"
+      },
+      {
+       "dir": "recv",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5",
+       "peer": "vendorB",
+       "peer_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58"
+      },
+      {
+       "dir": "send",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2",
+       "peer": "vendorA",
+       "peer_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1"
+      },
+      {
+       "dir": "send",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041",
+       "peer": "vendorB",
+       "peer_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37"
+      },
+      {
+       "dir": "send",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee",
+       "peer": "vendorA",
+       "peer_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0"
+      },
+      {
+       "dir": "send",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920",
+       "peer": "vendorB",
+       "peer_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "maintainer",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "59088dde2fae5ab9883b1fe69f377620b9fe4e0ef7add68ea3410d958e1e2ec1",
+     "verdict": null
+    },
+    "vendorA": {
+     "head": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a",
+       "peer": "maintainer",
+       "peer_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791"
+      },
+      {
+       "dir": "send",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e",
+       "peer": "maintainer",
+       "peer_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445"
+      },
+      {
+       "dir": "recv",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1",
+       "peer": "maintainer",
+       "peer_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2"
+      },
+      {
+       "dir": "recv",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0",
+       "peer": "maintainer",
+       "peer_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorA",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "59088dde2fae5ab9883b1fe69f377620b9fe4e0ef7add68ea3410d958e1e2ec1",
+     "verdict": "complied"
+    },
+    "vendorB": {
+     "head": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046",
+       "peer": "maintainer",
+       "peer_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7"
+      },
+      {
+       "dir": "send",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58",
+       "peer": "maintainer",
+       "peer_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5"
+      },
+      {
+       "dir": "recv",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37",
+       "peer": "maintainer",
+       "peer_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041"
+      },
+      {
+       "dir": "recv",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd",
+       "peer": "maintainer",
+       "peer_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorB",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "59088dde2fae5ab9883b1fe69f377620b9fe4e0ef7add68ea3410d958e1e2ec1",
+     "verdict": "complied"
+    }
+   }
+  },
+  "Q4": {
+   "aggregate_journal": {
+    "heads": {
+     "maintainer": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+     "vendorA": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+     "vendorB": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0"
+    },
+    "instance": "CVD-2026-0002",
+    "sid": "01e79f3d3c8b8cc86638643930ee5d98d718e9e5611d5af3e6c6e988f08ddf92",
+    "verdict": "complied"
+   },
+   "audit": {
+    "verdict": "complied"
+   },
+   "journals": {
+    "maintainer": {
+     "head": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+     "iface": [
+      {
+       "dir": "send",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791",
+       "peer": "vendorA",
+       "peer_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a"
+      },
+      {
+       "dir": "recv",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445",
+       "peer": "vendorA",
+       "peer_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e"
+      },
+      {
+       "dir": "send",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7",
+       "peer": "vendorB",
+       "peer_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046"
+      },
+      {
+       "dir": "recv",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5",
+       "peer": "vendorB",
+       "peer_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58"
+      },
+      {
+       "dir": "send",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2",
+       "peer": "vendorA",
+       "peer_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1"
+      },
+      {
+       "dir": "send",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041",
+       "peer": "vendorB",
+       "peer_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37"
+      },
+      {
+       "dir": "send",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee",
+       "peer": "vendorA",
+       "peer_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0"
+      },
+      {
+       "dir": "send",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920",
+       "peer": "vendorB",
+       "peer_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "maintainer",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "01e79f3d3c8b8cc86638643930ee5d98d718e9e5611d5af3e6c6e988f08ddf92",
+     "verdict": null
+    },
+    "vendorA": {
+     "head": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a",
+       "peer": "maintainer",
+       "peer_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791"
+      },
+      {
+       "dir": "send",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e",
+       "peer": "maintainer",
+       "peer_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445"
+      },
+      {
+       "dir": "recv",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1",
+       "peer": "maintainer",
+       "peer_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2"
+      },
+      {
+       "dir": "recv",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0",
+       "peer": "maintainer",
+       "peer_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorA",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "01e79f3d3c8b8cc86638643930ee5d98d718e9e5611d5af3e6c6e988f08ddf92",
+     "verdict": "complied"
+    },
+    "vendorB": {
+     "head": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046",
+       "peer": "maintainer",
+       "peer_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7"
+      },
+      {
+       "dir": "send",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58",
+       "peer": "maintainer",
+       "peer_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5"
+      },
+      {
+       "dir": "recv",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37",
+       "peer": "maintainer",
+       "peer_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041"
+      },
+      {
+       "dir": "recv",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd",
+       "peer": "maintainer",
+       "peer_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorB",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "01e79f3d3c8b8cc86638643930ee5d98d718e9e5611d5af3e6c6e988f08ddf92",
+     "verdict": "complied"
+    }
+   }
+  },
+  "Q5": {
+   "audit": {
+    "per_org": {
+     "vendorA": "complied",
+     "vendorB": "complied"
+    },
+    "verdict": "complied"
+   },
+   "journals": {
+    "maintainer": {
+     "head": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+     "iface": [
+      {
+       "dir": "send",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791",
+       "peer": "vendorA",
+       "peer_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a"
+      },
+      {
+       "dir": "recv",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445",
+       "peer": "vendorA",
+       "peer_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e"
+      },
+      {
+       "dir": "send",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7",
+       "peer": "vendorB",
+       "peer_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046"
+      },
+      {
+       "dir": "recv",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5",
+       "peer": "vendorB",
+       "peer_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58"
+      },
+      {
+       "dir": "send",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2",
+       "peer": "vendorA",
+       "peer_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1"
+      },
+      {
+       "dir": "send",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041",
+       "peer": "vendorB",
+       "peer_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37"
+      },
+      {
+       "dir": "send",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee",
+       "peer": "vendorA",
+       "peer_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0"
+      },
+      {
+       "dir": "send",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920",
+       "peer": "vendorB",
+       "peer_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "maintainer",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "672c0d263bcf757ef334482db60a26336d7ce19a19980ae35d89bbb2dbdbd04c",
+     "verdict": null
+    },
+    "vendorA": {
+     "head": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0",
+       "own_pre": "a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a",
+       "peer": "maintainer",
+       "peer_pre": "9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791"
+      },
+      {
+       "dir": "send",
+       "msg": "4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5",
+       "own_pre": "f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e",
+       "peer": "maintainer",
+       "peer_pre": "d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445"
+      },
+      {
+       "dir": "recv",
+       "msg": "235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128",
+       "own_pre": "6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1",
+       "peer": "maintainer",
+       "peer_pre": "60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2"
+      },
+      {
+       "dir": "recv",
+       "msg": "2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa",
+       "own_pre": "21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0",
+       "peer": "maintainer",
+       "peer_pre": "0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorA",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "672c0d263bcf757ef334482db60a26336d7ce19a19980ae35d89bbb2dbdbd04c",
+     "verdict": "complied"
+    },
+    "vendorB": {
+     "head": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0",
+     "iface": [
+      {
+       "dir": "recv",
+       "msg": "2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd",
+       "own_pre": "0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046",
+       "peer": "maintainer",
+       "peer_pre": "dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7"
+      },
+      {
+       "dir": "send",
+       "msg": "dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014",
+       "own_pre": "baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58",
+       "peer": "maintainer",
+       "peer_pre": "f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5"
+      },
+      {
+       "dir": "recv",
+       "msg": "184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990",
+       "own_pre": "6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37",
+       "peer": "maintainer",
+       "peer_pre": "654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041"
+      },
+      {
+       "dir": "recv",
+       "msg": "4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68",
+       "own_pre": "0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd",
+       "peer": "maintainer",
+       "peer_pre": "92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920"
+      }
+     ],
+     "instance": "CVD-2026-0002",
+     "org": "vendorB",
+     "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+     "settled": true,
+     "sid": "672c0d263bcf757ef334482db60a26336d7ce19a19980ae35d89bbb2dbdbd04c",
+     "verdict": "complied"
+    }
+   }
+  }
+ },
+ "format": "cvd-audit-scenario/1",
+ "genesis_salts": {
+  "maintainer": "644d662471c845a09e7d4673c721fb0bd6a88537293f3483a7baab92d153f778",
+  "vendorA": "210c6c7e78a4c587a54391c886df87b10dcd5988b1f6a230d3afc22f31ddca95",
+  "vendorB": "cc2c1f4545f451d7b319c8b9a2fc0d917d92952c1f2e02c04f23885c5380fbbe"
+ },
+ "instance": "CVD-2026-0002",
+ "kinds": {
+  "ack": [
+   "vendor",
+   "maintainer"
+  ],
+  "disclosure": [
+   "maintainer",
+   "vendor"
+  ],
+  "grace_end": [
+   "maintainer",
+   "vendor"
+  ],
+  "notify": [
+   "maintainer",
+   "vendor"
+  ]
+ },
+ "length": null,
+ "name": "S2 embargo broken",
+ "participants": {
+  "maintainer": "maintainer",
+  "vendorA": "vendor",
+  "vendorB": "vendor"
+ },
+ "participants_canonical": "{\"maintainer\":\"maintainer\",\"vendorA\":\"vendor\",\"vendorB\":\"vendor\"}",
+ "published": {
+  "maintainer": {
+   "head": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+   "pubkey": "216c2937e523d3defafee5fa166a0604f54bb394e038fb822c243eac5d1e5d74",
+   "sig": "64f43c458c25c72a177417592656e306c65b5ff620cc08078438c289dc97037b86dc030c27ce8198eede1fd7d03314cd647ed238159d64feedbff6ad50d6310e"
+  },
+  "vendorA": {
+   "head": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+   "pubkey": "7123781984767d2d23f1965ba1518f19d0137be4a4f275d99a0a0f82cfb7c32b",
+   "sig": "339324138f2e308026da178e891d6861f34e13d8b1f4042e4e789e47de9ae21c06dcd113fe801dbbebf90a4a16b963b9ca2504793b4edcd23683bf88d05a7507"
+  },
+  "vendorB": {
+   "head": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0",
+   "pubkey": "a10619169603f8a6172279bc424150c578a24b01add03909ef037c5156dd70fa",
+   "sig": "154a27964f7e6ab8d70c67194fd1548a40c8c0a2d08b58d925e58eb62b917691bac71c9c1ee9c6cfd8641cbdc5f230e21a6c479e14ca658c746540e3ac62360c"
+  }
+ },
+ "slices": {
+  "maintainer": [
+   [
+    "{\"type\":\"report\"}",
+    "4ac890cc88d152df716dfa070ef1694ddb23e8ebd8d90504e6dbdd8a4d0d6de9"
+   ],
+   [
+    "{\"body\":\"CVE details\",\"dir\":\"send\",\"msg\":\"b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0\",\"nonce\":\"25af770226a40727d7a272905cf1971a1c11a15db0a3e77de7f12e4a2ae3c653\",\"peer\":\"vendorA\",\"peer_head\":\"a3891ed25bcec57abe4cdc6c429f6686c3d8df29c0f611cc6043d7a28c9b690a\",\"type\":\"notify\"}",
+    "691a5cb8a6a8ef86f0f64085057dd3e18e490aee8f3a8a00871be417d838b251"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5\",\"nonce\":\"33824c6b4ab4f78ea4be8989247b682dc99747543e5c847f9186984f550e36d2\",\"peer\":\"vendorA\",\"peer_head\":\"f43e9b9917befbf84be29dcc2d19eead3a1143ea4504d5869e42cae15f092b7e\",\"type\":\"ack\"}",
+    "eca54148f5e8d2f0b31fa02d5bb3a287390ad3f7dd89845803fafb3e487d8182"
+   ],
+   [
+    "{\"body\":\"CVE details\",\"dir\":\"send\",\"msg\":\"2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd\",\"nonce\":\"e54e5f8e0086ff6c1d10e55cb850a81624d0e2f1c8d22b23d8c646172571e9ad\",\"peer\":\"vendorB\",\"peer_head\":\"0317ffef39652b7f491bf7849acdfd29e4aef2fc1f2e9080dcb229812ea0d046\",\"type\":\"notify\"}",
+    "c630b3f43fc2353ae13054be9053dd56ba77938f7797c6c33a4e3ea60b8d3b22"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014\",\"nonce\":\"004bf1517913db98d1da23639f0e5cc8ab87de973c19b13a3ea55b583ec10be2\",\"peer\":\"vendorB\",\"peer_head\":\"baa9209ab4671b902e7185dfba30ef85028005c6576dd1703219f1c1b378cb58\",\"type\":\"ack\"}",
+    "483f73321f1a8b6b5879d53473375e0b6c019d00551556dc339bbf3bf0ecebcb"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128\",\"nonce\":\"4be13641adc07f2b8288bef085923a824b24e019bba71f1a99218b4dc0b0cf94\",\"peer\":\"vendorA\",\"peer_head\":\"6d88fd97f025296e1ee573f4b9ca05a853c7c38262c543bfd5522cfb5ddc3dc1\",\"type\":\"disclosure\"}",
+    "948e42c75f2af2022c2dec75df76fddc6b8959e9caf1d87d70948ce6a6fedf89"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990\",\"nonce\":\"8bee5d3ec61824bbb5b654e24b8679c214198c998b1c7eee67b7bc3ac1acef97\",\"peer\":\"vendorB\",\"peer_head\":\"6a51b2087978dbd8fe95e342f94220507219010b79b5999d306af6c011508f37\",\"type\":\"disclosure\"}",
+    "39a13c471cec1f29c185bfc2c51825879fc4aa062eb2aba4cc7cd183452bca02"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa\",\"nonce\":\"1e54702f56695ce7873ed53214fe4f16b39154db15c6ae4feb81f4c724b493f2\",\"peer\":\"vendorA\",\"peer_head\":\"21af3c75bcb435f83212fdd85fd2e9ef305fb701c2cb7afcc3d1f745e3d7fcb0\",\"type\":\"grace_end\"}",
+    "b00d3b9c7645109cee3b3379402cf76ccc6019a28e34242bf8b41550593cada6"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68\",\"nonce\":\"679922ab2871356c3ea392c9df4013d1a942071763f155760572c5bf3a210ada\",\"peer\":\"vendorB\",\"peer_head\":\"0087d7e939d3c9b2975d8db61d0f45d46cbf891aea3ad6b43b3caad81ab56bdd\",\"type\":\"grace_end\"}",
+    "9a28ed6a32daeab6b71f1fe0c218877e6c0c21a2cdbd0b787df98ad89668008c"
+   ]
+  ],
+  "vendorA": [
+   [
+    "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"b5615095525a1c497247cb3939cb4d1dbc06b60035d468758999e0b9bf1c4bc0\",\"nonce\":\"25af770226a40727d7a272905cf1971a1c11a15db0a3e77de7f12e4a2ae3c653\",\"peer\":\"maintainer\",\"peer_head\":\"9a2ff8fa0c12c58858f4e927bbffcf76dfcc4230e17260f1eb06d74930574791\",\"type\":\"notify\"}",
+    "a8e1fdcc7e4125001d642a846c8ce8b7988ee2529c9f9c6df5a68910074b4f01"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"4319cfe94e7bfef16adc98fca9b3d50deb05cd8a67dbd8bf512f7a2a823324b5\",\"nonce\":\"33824c6b4ab4f78ea4be8989247b682dc99747543e5c847f9186984f550e36d2\",\"peer\":\"maintainer\",\"peer_head\":\"d8fdaa507c03ef2e9bb8c98912784eda787ec0b124206961dad37745b71e2445\",\"type\":\"ack\"}",
+    "dff984d356976a1ac96ef5d7eb55f605faf3912719b0de8b6f075466174064e1"
+   ],
+   [
+    "{\"affected_products\":3,\"type\":\"triage\"}",
+    "374220bc9c447724ee3b11c81371609381fbbc1db9a36a91453d851d774ab3b6"
+   ],
+   [
+    "{\"type\":\"advisory\"}",
+    "65a6c7a13c333ad5d5c2321cc142727e09937c2ec8b6415030822ae109a0aef3"
+   ],
+   [
+    "{\"coverage\":\"full\",\"type\":\"patch\"}",
+    "5d955675efe355d04f29101ec28323d17f0829dbaad3e2bdf689309ee6f21d27"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"235064358d3c5f7cfa6d8c46af8cee837fe8dc4b63a23f4234bb54aa366a7128\",\"nonce\":\"4be13641adc07f2b8288bef085923a824b24e019bba71f1a99218b4dc0b0cf94\",\"peer\":\"maintainer\",\"peer_head\":\"60d4d9e1a9a9c6e110ef52df6fa9c54b39d0b95d511b9f634b1eadc2aea5feb2\",\"type\":\"disclosure\"}",
+    "0d52c763edb06e87aeb3ee2ab7872abfdd0f69a7fd7e38aa9bee4dcae7c1e4ba"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"2c6708f1c5137970fc480ff48115a82a05e6e74b36392ef291196b8406e04daa\",\"nonce\":\"1e54702f56695ce7873ed53214fe4f16b39154db15c6ae4feb81f4c724b493f2\",\"peer\":\"maintainer\",\"peer_head\":\"0cc08d0621b2a6d5da3012c1f323f875e1c75c3a52e9bc278fe59d988dec91ee\",\"type\":\"grace_end\"}",
+    "5958ce3bf1e648a07753b96741fe14b9a5f0bbb429741343929214959ec515aa"
+   ]
+  ],
+  "vendorB": [
+   [
+    "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"2e2317fe58258a0d1c8ed3133552a126a52bc5b7d95a4e89dd6bcf5deafc3ebd\",\"nonce\":\"e54e5f8e0086ff6c1d10e55cb850a81624d0e2f1c8d22b23d8c646172571e9ad\",\"peer\":\"maintainer\",\"peer_head\":\"dc70fbdd795e542cf84a2260858f84ff6eba20bd3a01dd760540f2a278a6f9a7\",\"type\":\"notify\"}",
+    "1109cd2f94787fb7c81af346f4522bf8b6969b0c333177de75cfaddcc43a96a9"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"dd5f51401459bca43ed8e20e5d942eeeef3a0903f56a8c4e0f4e06a6f5606014\",\"nonce\":\"004bf1517913db98d1da23639f0e5cc8ab87de973c19b13a3ea55b583ec10be2\",\"peer\":\"maintainer\",\"peer_head\":\"f6cd6f11b4825e53467a532eaa113eb78849c30b1f48b8ea9f6a28ab89b455b5\",\"type\":\"ack\"}",
+    "d9a011157d12616f99c5f9678ecef11e42c6f3384e0b069c51ade6daeae02566"
+   ],
+   [
+    "{\"affected_products\":3,\"type\":\"triage\"}",
+    "69cff89f11916f0e1fdfe3af27b5e0988636257d58bcdb373e74d02a88ad58f1"
+   ],
+   [
+    "{\"coverage\":\"full\",\"type\":\"patch\"}",
+    "54139af9367e6a45f2ab4ea7eee1b47d7a1634f4721fd7a619a0604b6d822004"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"184f94bcb21c35407b25ef37306d25597e250dfbdb523bf68ea8f53340351990\",\"nonce\":\"8bee5d3ec61824bbb5b654e24b8679c214198c998b1c7eee67b7bc3ac1acef97\",\"peer\":\"maintainer\",\"peer_head\":\"654b6b9fd15746db9661148b7a1dc22dcf8abccd6b75f506c97c65468df60041\",\"type\":\"disclosure\"}",
+    "12f7223f3ed589fe0a2f8e43e6584a1061aeef42740d4945f81623051d4b5741"
+   ],
+   [
+    "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"4873bfa202262a38ef76efcff88e55336ca3ac8a91fd19f10498fbdeeb64cc68\",\"nonce\":\"679922ab2871356c3ea392c9df4013d1a942071763f155760572c5bf3a210ada\",\"peer\":\"maintainer\",\"peer_head\":\"92e8166c4bf2e744bb9d2306899b511a6555125c58aca480514dfc7e40401920\",\"type\":\"grace_end\"}",
+    "109cbcbb69f21e562798b1e77c9147304fb6b7612b742d05780dbf847b9e9f02"
+   ]
+  ]
+ }
+}

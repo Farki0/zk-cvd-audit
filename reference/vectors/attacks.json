@@ -1,0 +1,533 @@
+{
+ "base_scenario": "S1",
+ "cases": [
+  {
+   "expected": {
+    "reason": "interface: heads at the hand-off do not match (history rewritten around a message)",
+    "rejected_by": "auditor"
+   },
+   "expected_check": "5 (and 4)",
+   "name": "patch back-dated after closure",
+   "note": "",
+   "published_changed": {},
+   "slices_changed": {
+    "vendorC": [
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"02f162a46710118590583d4d71ff49708664219f1f26e20c5d6f4123b3d58bcf\",\"nonce\":\"cdadd04df39298bc63ecd7b16df00c4609f22197b7b619236d746f6dd4ac3067\",\"peer\":\"maintainer\",\"peer_head\":\"8705bf588102d683e17cbb2413762ecf39839bdeb607aed6d647d749f860fe11\",\"type\":\"notify\"}",
+      "2f97c9c8863ce2b747e18c3a6e4bf8f433e4095156883af60f13f4373b0352f0"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"53beb6e5302b9c003d624f4782bcb47ef2996c3f3c4baece71f7b060d4326aaa\",\"nonce\":\"a1cbae94f2e15c57427a4f23174e020197e0d2403ffb319e64bffaaa245d568f\",\"peer\":\"maintainer\",\"peer_head\":\"e88f0a66921337f133922b637851883a1d4c279abed1e42ec37c8e5a722cb366\",\"type\":\"ack\"}",
+      "e18d6cd00153233a96a370e30e9adf8d80db8f02d43b778c507b89df8e7b346a"
+     ],
+     [
+      "{\"affected_products\":3,\"type\":\"triage\"}",
+      "1d47010bc358fad4abfca168f87f8c800b5ae34a540df5cfcf7ac230dccc729a"
+     ],
+     [
+      "{\"coverage\":\"full\",\"type\":\"patch\"}",
+      "b057450e82d89a2769d9952da9b2359c971784dfbd09735815b0afdc7cb356b7"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"2c832dcf241fae4b9ca9a5c2990fd26de45b81520252ea4a754f1efbdb4fe157\",\"nonce\":\"abf92e64708667cbaf913cdf9637775c8b06f246194ec3ea97e77931eed7535e\",\"peer\":\"maintainer\",\"peer_head\":\"17b5bcbaff541b6bc348a485ed865a9cf3e0efafbe7ce8e8baab112aa255f922\",\"type\":\"disclosure\"}",
+      "6cee89ac7506e1587eb7ee4011bfd71b26e6c96217ef731614ba7d92f5656268"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"edc834ea77d9fa9c1f0b4dc344a5432e390f1c5c6efe7ff94ff35b7ae0fff6c9\",\"nonce\":\"af94854f5fc6051f7901e2213d6a071111070b1e975e64e8b337de004a9c60e9\",\"peer\":\"maintainer\",\"peer_head\":\"31687d31fd1255b5ec7277f77a7cd139d77038a234c0a506346665e09373f025\",\"type\":\"grace_end\"}",
+      "05a99eb5d9cb096b94ab141c6df9d9d08a5fb75f429ad0f40cbf7e69a350b0a5"
+     ]
+    ]
+   },
+   "statement": "Q3"
+  },
+  {
+   "expected": {
+    "reason": "interface: heads at the hand-off do not match (history rewritten around a message)",
+    "rejected_by": "auditor"
+   },
+   "expected_check": "5",
+   "name": "patch back-dated before closure, rewritten head published",
+   "note": "",
+   "published_changed": {
+    "vendorC": {
+     "head": "63b7a8aaa38ea500bbb10c25d5a57be1fd395b96162cadca988c98304e2ed381",
+     "pubkey": "84ab1e1a62d05adea451b46a2fc5a18a3f520ee00238b0168f7bb4a628218173",
+     "sig": "f24fd05396e5a50a39d913ca4bd69d43f502c863003e7aef8f0fe216ab2e18c5f51a0e0c960aa20823d689730bebcdb5724787b731e4d16df21f96cc911a5605"
+    }
+   },
+   "slices_changed": {
+    "vendorC": [
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"02f162a46710118590583d4d71ff49708664219f1f26e20c5d6f4123b3d58bcf\",\"nonce\":\"cdadd04df39298bc63ecd7b16df00c4609f22197b7b619236d746f6dd4ac3067\",\"peer\":\"maintainer\",\"peer_head\":\"8705bf588102d683e17cbb2413762ecf39839bdeb607aed6d647d749f860fe11\",\"type\":\"notify\"}",
+      "2f97c9c8863ce2b747e18c3a6e4bf8f433e4095156883af60f13f4373b0352f0"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"53beb6e5302b9c003d624f4782bcb47ef2996c3f3c4baece71f7b060d4326aaa\",\"nonce\":\"a1cbae94f2e15c57427a4f23174e020197e0d2403ffb319e64bffaaa245d568f\",\"peer\":\"maintainer\",\"peer_head\":\"e88f0a66921337f133922b637851883a1d4c279abed1e42ec37c8e5a722cb366\",\"type\":\"ack\"}",
+      "e18d6cd00153233a96a370e30e9adf8d80db8f02d43b778c507b89df8e7b346a"
+     ],
+     [
+      "{\"affected_products\":3,\"type\":\"triage\"}",
+      "1d47010bc358fad4abfca168f87f8c800b5ae34a540df5cfcf7ac230dccc729a"
+     ],
+     [
+      "{\"coverage\":\"full\",\"type\":\"patch\"}",
+      "b057450e82d89a2769d9952da9b2359c971784dfbd09735815b0afdc7cb356b7"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"2c832dcf241fae4b9ca9a5c2990fd26de45b81520252ea4a754f1efbdb4fe157\",\"nonce\":\"abf92e64708667cbaf913cdf9637775c8b06f246194ec3ea97e77931eed7535e\",\"peer\":\"maintainer\",\"peer_head\":\"17b5bcbaff541b6bc348a485ed865a9cf3e0efafbe7ce8e8baab112aa255f922\",\"type\":\"disclosure\"}",
+      "6cee89ac7506e1587eb7ee4011bfd71b26e6c96217ef731614ba7d92f5656268"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"edc834ea77d9fa9c1f0b4dc344a5432e390f1c5c6efe7ff94ff35b7ae0fff6c9\",\"nonce\":\"af94854f5fc6051f7901e2213d6a071111070b1e975e64e8b337de004a9c60e9\",\"peer\":\"maintainer\",\"peer_head\":\"31687d31fd1255b5ec7277f77a7cd139d77038a234c0a506346665e09373f025\",\"type\":\"grace_end\"}",
+      "05a99eb5d9cb096b94ab141c6df9d9d08a5fb75f429ad0f40cbf7e69a350b0a5"
+     ]
+    ]
+   },
+   "statement": "Q3"
+  },
+  {
+   "expected": {
+    "reason": "interface: heads at the hand-off do not match (history rewritten around a message)",
+    "rejected_by": "auditor"
+   },
+   "expected_check": "5, through an honest vendor",
+   "name": "maintainer and vendor rewrite together",
+   "note": "",
+   "published_changed": {
+    "maintainer": {
+     "head": "4bc73b6c82221a305f1842ef6f746fca29c4e23211d45e076d775deb6182fb36",
+     "pubkey": "216c2937e523d3defafee5fa166a0604f54bb394e038fb822c243eac5d1e5d74",
+     "sig": "ca8b31a6acc211141a57133d736152415c0f24101312a95d7c075ed55eac33900f8d8f418c626e5e3078c631330ea3fab0a2ba333e6e758de4ea92bc3e2d7c0f"
+    },
+    "vendorC": {
+     "head": "6220244702b77d37fb4f963b258b30f89c8e13571af26ea6aef6144258be354b",
+     "pubkey": "84ab1e1a62d05adea451b46a2fc5a18a3f520ee00238b0168f7bb4a628218173",
+     "sig": "60954bca748a24e80d97ae2a6d64a9b626ca7d8c789706b4fbad0d965e2a071683d23d1a0a2751b0728725df715b0026baa1d9564ecad79270df1c1ce0f5740f"
+    }
+   },
+   "slices_changed": {
+    "maintainer": [
+     [
+      "{\"type\":\"report\"}",
+      "4ac890cc88d152df716dfa070ef1694ddb23e8ebd8d90504e6dbdd8a4d0d6de9"
+     ],
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"send\",\"msg\":\"53b8c9fa0911d1a1b59b1a061bafa6131181cac5f3b9a1a0b42a9994a3ecf7fc\",\"nonce\":\"20c8decfb9fb67d12cc600ca4c87640ccbefdcdc64a723a0c6411461bf0e91c0\",\"peer\":\"vendorA\",\"peer_head\":\"c86280019010a8071da79e54ff16f15acdc072806867896fa39924e62b01cd04\",\"type\":\"notify\"}",
+      "691a5cb8a6a8ef86f0f64085057dd3e18e490aee8f3a8a00871be417d838b251"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"a7472ef08b63c5ff542ac2c42fcc0b1f6177dfa98ec04873bd7381765ea5e1a7\",\"nonce\":\"ddb6add118cb56a99e54506d1bcc6204d88d1a05a5b58f05d7b4a983bad199e0\",\"peer\":\"vendorA\",\"peer_head\":\"d12365781e1be46c324b588a219dc37923f0b984cebec03e17c34ffc0b9ebec0\",\"type\":\"ack\"}",
+      "eca54148f5e8d2f0b31fa02d5bb3a287390ad3f7dd89845803fafb3e487d8182"
+     ],
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"send\",\"msg\":\"356a8e7a3632e27e9be3b551d4ab3ebddb3103592c69e1cfecfea58f6fcddd64\",\"nonce\":\"95a70e0ffb48ea35d93a0ebe0d0ddabd6ff72ee12cf8ebf7e9f5a9ca478fea4b\",\"peer\":\"vendorB\",\"peer_head\":\"e8abf30c2707012763a123dd837ebad55549e75db71a8de03b812dce15332de3\",\"type\":\"notify\"}",
+      "c630b3f43fc2353ae13054be9053dd56ba77938f7797c6c33a4e3ea60b8d3b22"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"7cbb664b6826b80d2a98d980dd02c929fbd87f8ea4419509a06297adb66b2147\",\"nonce\":\"75068fa056d3236b1d0e996aef72a5a875b019063cc81f9493fb3af1a46d4afe\",\"peer\":\"vendorB\",\"peer_head\":\"38d98b77f0383d9c8221334c53025e59f60836dc49378ab53370e0a8ce8503f4\",\"type\":\"ack\"}",
+      "483f73321f1a8b6b5879d53473375e0b6c019d00551556dc339bbf3bf0ecebcb"
+     ],
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"send\",\"msg\":\"02f162a46710118590583d4d71ff49708664219f1f26e20c5d6f4123b3d58bcf\",\"nonce\":\"cdadd04df39298bc63ecd7b16df00c4609f22197b7b619236d746f6dd4ac3067\",\"peer\":\"vendorC\",\"peer_head\":\"ecfbbb2031538fa9f05cedc9ca7ace6239adbcfbb23a6d5d1315f570b05f51ea\",\"type\":\"notify\"}",
+      "948e42c75f2af2022c2dec75df76fddc6b8959e9caf1d87d70948ce6a6fedf89"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"53beb6e5302b9c003d624f4782bcb47ef2996c3f3c4baece71f7b060d4326aaa\",\"nonce\":\"a1cbae94f2e15c57427a4f23174e020197e0d2403ffb319e64bffaaa245d568f\",\"peer\":\"vendorC\",\"peer_head\":\"d1e044f029ec74fdbc21951da2e0e59d44d08aa02474f527a0a494d00b17e773\",\"type\":\"ack\"}",
+      "39a13c471cec1f29c185bfc2c51825879fc4aa062eb2aba4cc7cd183452bca02"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"fc7dd07e4e06b740a8f52edeaf21be09d36517a5d5ac4fd3bf505b35003ebe32\",\"nonce\":\"53d24f9b708684fda78f96792a2b79fee31a4bc3683a6244ab51f6a7c7565a9d\",\"peer\":\"vendorA\",\"peer_head\":\"ac80805ba8e0871e1ede0a828f496fbbe700f0ca5c99a67ed195cc7db810a546\",\"type\":\"disclosure\"}",
+      "b00d3b9c7645109cee3b3379402cf76ccc6019a28e34242bf8b41550593cada6"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"04812b59cd29b5c66178bf9281a567781f79e743e902064ef9cea20a8e7310de\",\"nonce\":\"e4d34043caa18e11a81978bcfe37d64d7877257eb0e13dd7717ac4540add3094\",\"peer\":\"vendorB\",\"peer_head\":\"c78dc3625615c277245167403d6ee2c7172929405f5f4b8b478a18075e4292c4\",\"type\":\"disclosure\"}",
+      "9a28ed6a32daeab6b71f1fe0c218877e6c0c21a2cdbd0b787df98ad89668008c"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"2c832dcf241fae4b9ca9a5c2990fd26de45b81520252ea4a754f1efbdb4fe157\",\"nonce\":\"abf92e64708667cbaf913cdf9637775c8b06f246194ec3ea97e77931eed7535e\",\"peer\":\"vendorC\",\"peer_head\":\"be46678fcefdba8a51df728119c8e72d84b79bab7b23b78935aba1be6c032fa2\",\"type\":\"disclosure\"}",
+      "c0391b09851717644f3b3fb75c9a95512149d47c20918bc4c91c315a2d7807c2"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"cffd4db23afe3e30ea0d62edfcdd61941b93bf17993c499d6bfc9a0e666587d5\",\"nonce\":\"162bc9c7a8a427dbd9143e32ac221f912c74cfb9a1efabfa703e2225b9840c9c\",\"peer\":\"vendorA\",\"peer_head\":\"7c34897737616f47b6de7dda0110b4e63e121cb4530725d5a8a90fc5b043644f\",\"type\":\"grace_end\"}",
+      "699cb686a2956b6106f3f7721645e107c661ae9b323fba98761dea21221d3cc9"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"982f2a8c83d7cd4b22b70a3f41c875df613e6c41bc9cbe66c5ad6d1900c62ab2\",\"nonce\":\"31d2c92410f6d2828258d1319a5dd867abad858d348efa4f459f80cfb4e49101\",\"peer\":\"vendorB\",\"peer_head\":\"fae05c0266e84bd5f908275f88d1bef851b454731df918dc6034c250c6ae2217\",\"type\":\"grace_end\"}",
+      "d042316fda7fb68b469c01f45288c9843ec1fdc19998b0af5b3e25d84888c7de"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"edc834ea77d9fa9c1f0b4dc344a5432e390f1c5c6efe7ff94ff35b7ae0fff6c9\",\"nonce\":\"af94854f5fc6051f7901e2213d6a071111070b1e975e64e8b337de004a9c60e9\",\"peer\":\"vendorC\",\"peer_head\":\"adc18679decc2d570beb7c5a017f06347a7d19d24840a741fafd740e8c3f35cd\",\"type\":\"grace_end\"}",
+      "e490513d6e5eddff4a25f815d1145a44615bc110228670d08d5d8e1517c89447"
+     ]
+    ],
+    "vendorC": [
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"02f162a46710118590583d4d71ff49708664219f1f26e20c5d6f4123b3d58bcf\",\"nonce\":\"cdadd04df39298bc63ecd7b16df00c4609f22197b7b619236d746f6dd4ac3067\",\"peer\":\"maintainer\",\"peer_head\":\"8705bf588102d683e17cbb2413762ecf39839bdeb607aed6d647d749f860fe11\",\"type\":\"notify\"}",
+      "2f97c9c8863ce2b747e18c3a6e4bf8f433e4095156883af60f13f4373b0352f0"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"53beb6e5302b9c003d624f4782bcb47ef2996c3f3c4baece71f7b060d4326aaa\",\"nonce\":\"a1cbae94f2e15c57427a4f23174e020197e0d2403ffb319e64bffaaa245d568f\",\"peer\":\"maintainer\",\"peer_head\":\"e88f0a66921337f133922b637851883a1d4c279abed1e42ec37c8e5a722cb366\",\"type\":\"ack\"}",
+      "e18d6cd00153233a96a370e30e9adf8d80db8f02d43b778c507b89df8e7b346a"
+     ],
+     [
+      "{\"affected_products\":3,\"type\":\"triage\"}",
+      "1d47010bc358fad4abfca168f87f8c800b5ae34a540df5cfcf7ac230dccc729a"
+     ],
+     [
+      "{\"coverage\":\"full\",\"type\":\"patch\"}",
+      "b057450e82d89a2769d9952da9b2359c971784dfbd09735815b0afdc7cb356b7"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"2c832dcf241fae4b9ca9a5c2990fd26de45b81520252ea4a754f1efbdb4fe157\",\"nonce\":\"abf92e64708667cbaf913cdf9637775c8b06f246194ec3ea97e77931eed7535e\",\"peer\":\"maintainer\",\"peer_head\":\"17b5bcbaff541b6bc348a485ed865a9cf3e0efafbe7ce8e8baab112aa255f922\",\"type\":\"disclosure\"}",
+      "6cee89ac7506e1587eb7ee4011bfd71b26e6c96217ef731614ba7d92f5656268"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"edc834ea77d9fa9c1f0b4dc344a5432e390f1c5c6efe7ff94ff35b7ae0fff6c9\",\"nonce\":\"af94854f5fc6051f7901e2213d6a071111070b1e975e64e8b337de004a9c60e9\",\"peer\":\"maintainer\",\"peer_head\":\"038ad4e8fe3ef02707ecf5dee3ee3668d09cb7b29f80070411e85e504e054fdf\",\"type\":\"grace_end\"}",
+      "05a99eb5d9cb096b94ab141c6df9d9d08a5fb75f429ad0f40cbf7e69a350b0a5"
+     ]
+    ]
+   },
+   "statement": "Q3"
+  },
+  {
+   "expected": {
+    "reason": "interface: a message is missing on one side",
+    "rejected_by": "auditor"
+   },
+   "expected_check": "5",
+   "name": "received message dropped",
+   "note": "",
+   "published_changed": {
+    "vendorC": {
+     "head": "1c830df98a13c097f0715a7891f337577fb69019afb7d260e43e3c6df2a45f5b",
+     "pubkey": "84ab1e1a62d05adea451b46a2fc5a18a3f520ee00238b0168f7bb4a628218173",
+     "sig": "fc91688c6982f25d7d5df4a3ff909462870ee3fcb17638a657fe886b8f71d79913b6515d87ffa765edccc723ba48f4f53e1e85ad87a646a7b3c4557e5986f00b"
+    }
+   },
+   "slices_changed": {
+    "vendorC": [
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"02f162a46710118590583d4d71ff49708664219f1f26e20c5d6f4123b3d58bcf\",\"nonce\":\"cdadd04df39298bc63ecd7b16df00c4609f22197b7b619236d746f6dd4ac3067\",\"peer\":\"maintainer\",\"peer_head\":\"8705bf588102d683e17cbb2413762ecf39839bdeb607aed6d647d749f860fe11\",\"type\":\"notify\"}",
+      "2f97c9c8863ce2b747e18c3a6e4bf8f433e4095156883af60f13f4373b0352f0"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"53beb6e5302b9c003d624f4782bcb47ef2996c3f3c4baece71f7b060d4326aaa\",\"nonce\":\"a1cbae94f2e15c57427a4f23174e020197e0d2403ffb319e64bffaaa245d568f\",\"peer\":\"maintainer\",\"peer_head\":\"e88f0a66921337f133922b637851883a1d4c279abed1e42ec37c8e5a722cb366\",\"type\":\"ack\"}",
+      "e18d6cd00153233a96a370e30e9adf8d80db8f02d43b778c507b89df8e7b346a"
+     ],
+     [
+      "{\"affected_products\":3,\"type\":\"triage\"}",
+      "1d47010bc358fad4abfca168f87f8c800b5ae34a540df5cfcf7ac230dccc729a"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"edc834ea77d9fa9c1f0b4dc344a5432e390f1c5c6efe7ff94ff35b7ae0fff6c9\",\"nonce\":\"af94854f5fc6051f7901e2213d6a071111070b1e975e64e8b337de004a9c60e9\",\"peer\":\"maintainer\",\"peer_head\":\"31687d31fd1255b5ec7277f77a7cd139d77038a234c0a506346665e09373f025\",\"type\":\"grace_end\"}",
+      "b057450e82d89a2769d9952da9b2359c971784dfbd09735815b0afdc7cb356b7"
+     ]
+    ]
+   },
+   "statement": "Q3"
+  },
+  {
+   "expected": {
+    "reason": "record type or peer does not match the interface commitment",
+    "rejected_by": "guest"
+   },
+   "expected_check": "guest: interface commitment",
+   "name": "disclosure relabelled as another message kind",
+   "note": "",
+   "published_changed": {},
+   "slices_changed": {
+    "vendorC": [
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"02f162a46710118590583d4d71ff49708664219f1f26e20c5d6f4123b3d58bcf\",\"nonce\":\"cdadd04df39298bc63ecd7b16df00c4609f22197b7b619236d746f6dd4ac3067\",\"peer\":\"maintainer\",\"peer_head\":\"8705bf588102d683e17cbb2413762ecf39839bdeb607aed6d647d749f860fe11\",\"type\":\"notify\"}",
+      "2f97c9c8863ce2b747e18c3a6e4bf8f433e4095156883af60f13f4373b0352f0"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"53beb6e5302b9c003d624f4782bcb47ef2996c3f3c4baece71f7b060d4326aaa\",\"nonce\":\"a1cbae94f2e15c57427a4f23174e020197e0d2403ffb319e64bffaaa245d568f\",\"peer\":\"maintainer\",\"peer_head\":\"e88f0a66921337f133922b637851883a1d4c279abed1e42ec37c8e5a722cb366\",\"type\":\"ack\"}",
+      "e18d6cd00153233a96a370e30e9adf8d80db8f02d43b778c507b89df8e7b346a"
+     ],
+     [
+      "{\"affected_products\":3,\"type\":\"triage\"}",
+      "1d47010bc358fad4abfca168f87f8c800b5ae34a540df5cfcf7ac230dccc729a"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"2c832dcf241fae4b9ca9a5c2990fd26de45b81520252ea4a754f1efbdb4fe157\",\"nonce\":\"abf92e64708667cbaf913cdf9637775c8b06f246194ec3ea97e77931eed7535e\",\"peer\":\"maintainer\",\"peer_head\":\"17b5bcbaff541b6bc348a485ed865a9cf3e0efafbe7ce8e8baab112aa255f922\",\"type\":\"notify\"}",
+      "b057450e82d89a2769d9952da9b2359c971784dfbd09735815b0afdc7cb356b7"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"edc834ea77d9fa9c1f0b4dc344a5432e390f1c5c6efe7ff94ff35b7ae0fff6c9\",\"nonce\":\"af94854f5fc6051f7901e2213d6a071111070b1e975e64e8b337de004a9c60e9\",\"peer\":\"maintainer\",\"peer_head\":\"31687d31fd1255b5ec7277f77a7cd139d77038a234c0a506346665e09373f025\",\"type\":\"grace_end\"}",
+      "6cee89ac7506e1587eb7ee4011bfd71b26e6c96217ef731614ba7d92f5656268"
+     ]
+    ]
+   },
+   "statement": "Q3"
+  },
+  {
+   "expected": {
+    "reason": "record type or peer does not match the interface commitment",
+    "rejected_by": "guest"
+   },
+   "expected_check": "guest: interface commitment",
+   "name": "proof over another vendor's records",
+   "note": "",
+   "published_changed": {},
+   "slices_changed": {
+    "vendorC": [
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"53b8c9fa0911d1a1b59b1a061bafa6131181cac5f3b9a1a0b42a9994a3ecf7fc\",\"nonce\":\"20c8decfb9fb67d12cc600ca4c87640ccbefdcdc64a723a0c6411461bf0e91c0\",\"peer\":\"maintainer\",\"peer_head\":\"862985d9e7b8109e9949a70683fd7330c5a9a5db53a41eca1f3d816810a9c3b4\",\"type\":\"notify\"}",
+      "a8e1fdcc7e4125001d642a846c8ce8b7988ee2529c9f9c6df5a68910074b4f01"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"a7472ef08b63c5ff542ac2c42fcc0b1f6177dfa98ec04873bd7381765ea5e1a7\",\"nonce\":\"ddb6add118cb56a99e54506d1bcc6204d88d1a05a5b58f05d7b4a983bad199e0\",\"peer\":\"maintainer\",\"peer_head\":\"253fb725d27b2e752764823003c0e376133a3e7b604453cc267ab46d6545d424\",\"type\":\"ack\"}",
+      "dff984d356976a1ac96ef5d7eb55f605faf3912719b0de8b6f075466174064e1"
+     ],
+     [
+      "{\"affected_products\":3,\"type\":\"triage\"}",
+      "374220bc9c447724ee3b11c81371609381fbbc1db9a36a91453d851d774ab3b6"
+     ],
+     [
+      "{\"coverage\":\"full\",\"type\":\"patch\"}",
+      "65a6c7a13c333ad5d5c2321cc142727e09937c2ec8b6415030822ae109a0aef3"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"fc7dd07e4e06b740a8f52edeaf21be09d36517a5d5ac4fd3bf505b35003ebe32\",\"nonce\":\"53d24f9b708684fda78f96792a2b79fee31a4bc3683a6244ab51f6a7c7565a9d\",\"peer\":\"maintainer\",\"peer_head\":\"c1db7c88a283ac89e609c9448c0e48b9acf54fe6f10e988410d1b74959950444\",\"type\":\"disclosure\"}",
+      "5d955675efe355d04f29101ec28323d17f0829dbaad3e2bdf689309ee6f21d27"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"cffd4db23afe3e30ea0d62edfcdd61941b93bf17993c499d6bfc9a0e666587d5\",\"nonce\":\"162bc9c7a8a427dbd9143e32ac221f912c74cfb9a1efabfa703e2225b9840c9c\",\"peer\":\"maintainer\",\"peer_head\":\"9ab0e8a49b19e9e1364ec91a74ba8701685705b7087b4650e5fe2c90ce4f4be6\",\"type\":\"grace_end\"}",
+      "0d52c763edb06e87aeb3ee2ab7872abfdd0f69a7fd7e38aa9bee4dcae7c1e4ba"
+     ]
+    ]
+   },
+   "statement": "Q3"
+  },
+  {
+   "expected": {
+    "reason": "check 4: vendorA: proof is not about the slice it committed to at closure",
+    "rejected_by": "auditor"
+   },
+   "expected_check": "4",
+   "name": "record appended after closure",
+   "note": "",
+   "published_changed": {},
+   "slices_changed": {
+    "vendorA": [
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"53b8c9fa0911d1a1b59b1a061bafa6131181cac5f3b9a1a0b42a9994a3ecf7fc\",\"nonce\":\"20c8decfb9fb67d12cc600ca4c87640ccbefdcdc64a723a0c6411461bf0e91c0\",\"peer\":\"maintainer\",\"peer_head\":\"862985d9e7b8109e9949a70683fd7330c5a9a5db53a41eca1f3d816810a9c3b4\",\"type\":\"notify\"}",
+      "a8e1fdcc7e4125001d642a846c8ce8b7988ee2529c9f9c6df5a68910074b4f01"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"a7472ef08b63c5ff542ac2c42fcc0b1f6177dfa98ec04873bd7381765ea5e1a7\",\"nonce\":\"ddb6add118cb56a99e54506d1bcc6204d88d1a05a5b58f05d7b4a983bad199e0\",\"peer\":\"maintainer\",\"peer_head\":\"253fb725d27b2e752764823003c0e376133a3e7b604453cc267ab46d6545d424\",\"type\":\"ack\"}",
+      "dff984d356976a1ac96ef5d7eb55f605faf3912719b0de8b6f075466174064e1"
+     ],
+     [
+      "{\"affected_products\":3,\"type\":\"triage\"}",
+      "374220bc9c447724ee3b11c81371609381fbbc1db9a36a91453d851d774ab3b6"
+     ],
+     [
+      "{\"coverage\":\"full\",\"type\":\"patch\"}",
+      "65a6c7a13c333ad5d5c2321cc142727e09937c2ec8b6415030822ae109a0aef3"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"fc7dd07e4e06b740a8f52edeaf21be09d36517a5d5ac4fd3bf505b35003ebe32\",\"nonce\":\"53d24f9b708684fda78f96792a2b79fee31a4bc3683a6244ab51f6a7c7565a9d\",\"peer\":\"maintainer\",\"peer_head\":\"c1db7c88a283ac89e609c9448c0e48b9acf54fe6f10e988410d1b74959950444\",\"type\":\"disclosure\"}",
+      "5d955675efe355d04f29101ec28323d17f0829dbaad3e2bdf689309ee6f21d27"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"cffd4db23afe3e30ea0d62edfcdd61941b93bf17993c499d6bfc9a0e666587d5\",\"nonce\":\"162bc9c7a8a427dbd9143e32ac221f912c74cfb9a1efabfa703e2225b9840c9c\",\"peer\":\"maintainer\",\"peer_head\":\"9ab0e8a49b19e9e1364ec91a74ba8701685705b7087b4650e5fe2c90ce4f4be6\",\"type\":\"grace_end\"}",
+      "0d52c763edb06e87aeb3ee2ab7872abfdd0f69a7fd7e38aa9bee4dcae7c1e4ba"
+     ],
+     [
+      "{\"type\":\"advisory\"}",
+      "5958ce3bf1e648a07753b96741fe14b9a5f0bbb429741343929214959ec515aa"
+     ]
+    ]
+   },
+   "statement": "Q3"
+  },
+  {
+   "expected": {
+    "reason": "wrong statement or instance",
+    "rejected_by": "auditor"
+   },
+   "expected_check": "2",
+   "name": "proof for an easier statement",
+   "note": "vendorC proves Q1 instead of Q3",
+   "published_changed": {},
+   "slices_changed": {},
+   "statement": "Q3"
+  },
+  {
+   "expected": {
+    "reason": "full participation fails: the provers are not exactly the participant set",
+    "rejected_by": "auditor"
+   },
+   "expected_check": "3",
+   "name": "one participant withholds its proof",
+   "note": "vendorC submits nothing",
+   "published_changed": {},
+   "slices_changed": {},
+   "statement": "Q3"
+  },
+  {
+   "expected": {
+    "reason": "a shared event was recorded without a hand-off",
+    "rejected_by": "guest"
+   },
+   "expected_check": "guest: no link",
+   "genesis_salts": {
+    "vendorA": "3959331262666ec08ea18f1a51f0e6e742410926013084cf7338b8e52d7005c9"
+   },
+   "instance": "K",
+   "name": "local disclosure inserted before an early advisory",
+   "participants": {
+    "maintainer": "maintainer",
+    "vendorA": "vendor"
+   },
+   "slices_changed": {
+    "vendorA": [
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"cfcf4bb6ee6aed4a7bc50c36e8d28d179eefe6fc7096faa4a640c5de0ea80044\",\"nonce\":\"a86fca45d8acc5d374783bc0efc9e145d726d96623129022599ed559b9a4e912\",\"peer\":\"maintainer\",\"peer_head\":\"15a8971f67b2b091437cac10c9729a05f88078a504d5ab7241e16c5d36b3e96a\",\"type\":\"notify\"}",
+      "a8e1fdcc7e4125001d642a846c8ce8b7988ee2529c9f9c6df5a68910074b4f01"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"6cda471f0850614d4e8e4342188136cb9caaa9dfe52d6d9643e5d5d714dc58a1\",\"nonce\":\"103fded29a8f60f952d272506f3f2bb97e7b607f08540861b618e64e46bd44a0\",\"peer\":\"maintainer\",\"peer_head\":\"9c44899a6e07cfa7bceb92578d2d0261b475c240c58d96e1ae3ac795e2610302\",\"type\":\"ack\"}",
+      "dff984d356976a1ac96ef5d7eb55f605faf3912719b0de8b6f075466174064e1"
+     ],
+     [
+      "{\"affected_products\":3,\"type\":\"triage\"}",
+      "374220bc9c447724ee3b11c81371609381fbbc1db9a36a91453d851d774ab3b6"
+     ],
+     [
+      "{\"type\":\"disclosure\"}",
+      "65a6c7a13c333ad5d5c2321cc142727e09937c2ec8b6415030822ae109a0aef3"
+     ],
+     [
+      "{\"type\":\"advisory\"}",
+      "5d955675efe355d04f29101ec28323d17f0829dbaad3e2bdf689309ee6f21d27"
+     ],
+     [
+      "{\"coverage\":\"full\",\"type\":\"patch\"}",
+      "0d52c763edb06e87aeb3ee2ab7872abfdd0f69a7fd7e38aa9bee4dcae7c1e4ba"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"9b465feb096c4eebdf2984f02c88c6ca9e6bbe35642419fab45855e303389e7c\",\"nonce\":\"0285554c8a6e4791b3ef2d370906099f94d88c85cd3992e6b3e383fc641a2e9f\",\"peer\":\"maintainer\",\"peer_head\":\"236c80982ba32a59bd111331bd5e1a8c61cc236577653139b3ff739da08bf69d\",\"type\":\"disclosure\"}",
+      "5958ce3bf1e648a07753b96741fe14b9a5f0bbb429741343929214959ec515aa"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"586cdf928434449ad434efb33e3ae1029f21e7ded9ecf6681162565c00f9c13d\",\"nonce\":\"f086803c6d98a5b9bfecc90771c6240ac58d4412281d5324d8eff4501419670c\",\"peer\":\"maintainer\",\"peer_head\":\"c69e5a691f5c2dbb987d7f46fd952da04b11d86a4a747b4727879de053fee2a7\",\"type\":\"grace_end\"}",
+      "916274e1b6bcc42c72a71322740f72dc3e00c3710543574121c5647ecfab894d"
+     ]
+    ]
+   },
+   "statement": "Q1"
+  },
+  {
+   "expected": {
+    "reason": "message kind not allowed between these roles",
+    "rejected_by": "guest"
+   },
+   "expected_check": "guest: roles",
+   "genesis_salts": {
+    "vendorB": "516f50edd39d2f95d48b08a7c978cf55e271de5373a8a782b1e078f1de0a1a4f"
+   },
+   "instance": "L",
+   "name": "disclosure sent by a vendor",
+   "participants": {
+    "maintainer": "maintainer",
+    "vendorA": "vendor",
+    "vendorB": "vendor"
+   },
+   "slices_changed": {
+    "vendorB": [
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"669746868c958fb654c45af993ba5eeed4a16680392d02113fa01a0bbe9e0a31\",\"nonce\":\"9f75d306892ca3878eb8d1d6622e1e9132e262d6bfff3eb4bdecd3121f6bb60e\",\"peer\":\"vendorA\",\"peer_head\":\"df3732c4862d8f179bde95df1151529dcd43fc7b07a7e590a2197e6ea294e7b7\",\"type\":\"disclosure\"}",
+      "1109cd2f94787fb7c81af346f4522bf8b6969b0c333177de75cfaddcc43a96a9"
+     ]
+    ]
+   },
+   "statement": "Q1"
+  },
+  {
+   "expected": {
+    "accepted": {
+     "per_org": {
+      "vendorC": "complied"
+     },
+     "verdict": "complied"
+    }
+   },
+   "genesis_salts": {
+    "maintainer": "4ecec9d283be7c33dc43b730f203318fe5f24b248197d1a8c6d8a8d32f392e33",
+    "vendorC": "37771ceee620d5f0662c807172d33a860c199b7bfe80d77a90c1ab1767495eb2"
+   },
+   "instance": "M",
+   "name": "single vendor colludes with the maintainer (known limit: accepted)",
+   "participants": {
+    "maintainer": "maintainer",
+    "vendorC": "vendor"
+   },
+   "published": {
+    "maintainer": {
+     "head": "ff3ccb21c253936426fba872beaf1ea6b1db9c2c0306f61497a61438e9adb830",
+     "pubkey": "216c2937e523d3defafee5fa166a0604f54bb394e038fb822c243eac5d1e5d74",
+     "sig": "1f0bcbd36d521d2e0253ea91bebe1baf902a5ad085b80f4944423e8c708e95dc6536129a5e1f57844353442a25f5eee54166c03579f53fdc606a6079b2959f0b"
+    },
+    "vendorC": {
+     "head": "82b9da1de0c1852374d33da3138697f5aec8e8a8ec5c7d9a3f127df0800c6570",
+     "pubkey": "84ab1e1a62d05adea451b46a2fc5a18a3f520ee00238b0168f7bb4a628218173",
+     "sig": "7835a914d869a2edeebf294763a1e38bbac54ef76c997873e8e60577abaa8e2f2c0861215a9b16484cba85c16c2b3b19e7012e76ca064a756157cb0f91692008"
+    }
+   },
+   "slices": {
+    "maintainer": [
+     [
+      "{\"type\":\"report\"}",
+      "4ac890cc88d152df716dfa070ef1694ddb23e8ebd8d90504e6dbdd8a4d0d6de9"
+     ],
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"send\",\"msg\":\"6ffcdbcb615c4c6a6804dce5178a7e596c9f97caecdc8d01941f538dc0690ed6\",\"nonce\":\"a23def4df44208b210049696b1919943f231febce653ab4b1f23c6e37ff899a7\",\"peer\":\"vendorC\",\"peer_head\":\"07d289c102afe7a7f3b8d6cb39958df847e80c7495155a83915551c78737cb26\",\"type\":\"notify\"}",
+      "691a5cb8a6a8ef86f0f64085057dd3e18e490aee8f3a8a00871be417d838b251"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"231309c8d9229e5e45d143badc197c77f43c2af6ae602089415f795915b807dd\",\"nonce\":\"8a740bf9579de4dbb1d11b2d08774586e74b871e69d8f94df2c2ed1bf1415034\",\"peer\":\"vendorC\",\"peer_head\":\"3306a7aae368e4e3fe30a68911426f6b4aeb679e5df456e724f8e0ad38fe2c55\",\"type\":\"ack\"}",
+      "eca54148f5e8d2f0b31fa02d5bb3a287390ad3f7dd89845803fafb3e487d8182"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"9532842613ba1cdb61123f575fe4c86e8821a8e25345185091dd9b6c7dddc05d\",\"nonce\":\"0f83e8f34d61b95ec49f9ab0a729bf5674c3e385125b2de3927cec322e8c6fc6\",\"peer\":\"vendorC\",\"peer_head\":\"ba88fe477a53461d3f63f7e2df9f4378d0ab4a45710c667944b13eb7265f578b\",\"type\":\"disclosure\"}",
+      "c630b3f43fc2353ae13054be9053dd56ba77938f7797c6c33a4e3ea60b8d3b22"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"b635be982d9d80c02c060bc7e19893c2f0472030fb7357fb9ed54af8c867742a\",\"nonce\":\"a52b7c540def533a19fa6da0d9e71372695755349c86048cc6d5400e16c77db8\",\"peer\":\"vendorC\",\"peer_head\":\"644efc2d679b91811142a343be434cea97a388553bcbdd52aef3a8eb4e0bc1ca\",\"type\":\"grace_end\"}",
+      "483f73321f1a8b6b5879d53473375e0b6c019d00551556dc339bbf3bf0ecebcb"
+     ]
+    ],
+    "vendorC": [
+     [
+      "{\"body\":\"CVE details\",\"dir\":\"recv\",\"msg\":\"6ffcdbcb615c4c6a6804dce5178a7e596c9f97caecdc8d01941f538dc0690ed6\",\"nonce\":\"a23def4df44208b210049696b1919943f231febce653ab4b1f23c6e37ff899a7\",\"peer\":\"maintainer\",\"peer_head\":\"ad0c8de9821ee38de60c5d277adf78ab171aca42deccdad8afeacae7c7e9931c\",\"type\":\"notify\"}",
+      "2f97c9c8863ce2b747e18c3a6e4bf8f433e4095156883af60f13f4373b0352f0"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"send\",\"msg\":\"231309c8d9229e5e45d143badc197c77f43c2af6ae602089415f795915b807dd\",\"nonce\":\"8a740bf9579de4dbb1d11b2d08774586e74b871e69d8f94df2c2ed1bf1415034\",\"peer\":\"maintainer\",\"peer_head\":\"3424cdd5c636fc9a68db62c419c3871edf1e44fe38b7460204f0ff06113939e6\",\"type\":\"ack\"}",
+      "e18d6cd00153233a96a370e30e9adf8d80db8f02d43b778c507b89df8e7b346a"
+     ],
+     [
+      "{\"affected_products\":3,\"type\":\"triage\"}",
+      "1d47010bc358fad4abfca168f87f8c800b5ae34a540df5cfcf7ac230dccc729a"
+     ],
+     [
+      "{\"coverage\":\"full\",\"type\":\"patch\"}",
+      "b057450e82d89a2769d9952da9b2359c971784dfbd09735815b0afdc7cb356b7"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"9532842613ba1cdb61123f575fe4c86e8821a8e25345185091dd9b6c7dddc05d\",\"nonce\":\"0f83e8f34d61b95ec49f9ab0a729bf5674c3e385125b2de3927cec322e8c6fc6\",\"peer\":\"maintainer\",\"peer_head\":\"b3a4fb42f2518cdc1d39cabdf98dd3cb5956df78be1984a0626306b53ca22833\",\"type\":\"disclosure\"}",
+      "6cee89ac7506e1587eb7ee4011bfd71b26e6c96217ef731614ba7d92f5656268"
+     ],
+     [
+      "{\"body\":\"\",\"dir\":\"recv\",\"msg\":\"b635be982d9d80c02c060bc7e19893c2f0472030fb7357fb9ed54af8c867742a\",\"nonce\":\"a52b7c540def533a19fa6da0d9e71372695755349c86048cc6d5400e16c77db8\",\"peer\":\"maintainer\",\"peer_head\":\"2dea14898ce28ed7c419b09bf41fc2946fe6918b8dd471619c82d29f83698857\",\"type\":\"grace_end\"}",
+      "05a99eb5d9cb096b94ab141c6df9d9d08a5fb75f429ad0f40cbf7e69a350b0a5"
+     ]
+    ]
+   },
+   "statement": "Q3"
+  }
+ ]
+}

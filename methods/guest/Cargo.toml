@@ -1,0 +1,28 @@
+[package]
+name = "guest"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[[bin]]
+name = "g_full"
+path = "src/bin/g_full.rs"
+[[bin]]
+name = "g_iface"
+path = "src/bin/g_iface.rs"
+[[bin]]
+name = "g_chain"
+path = "src/bin/g_chain.rs"
+[[bin]]
+name = "g_agg"
+path = "src/bin/g_agg.rs"
+
+[dependencies]
+risc0-zkvm = { version = "=3.0.6", default-features = false, features = ["std"] }
+audit-core = { path = "../../core" }
+serde_json = "1"
+
+# SHA-256 accelerator of the zkVM (a precompile); audit-core depends on sha2.
+[patch.crates-io]
+sha2 = { git = "https://github.com/risc0/RustCrypto-hashes", tag = "sha2-v0.10.8-risczero.0" }

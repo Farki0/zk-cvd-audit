@@ -1,0 +1,8 @@
+target/
+work/
+runs/
+logs/
+cache/
+*.receipt
+__pycache__/
+.git/

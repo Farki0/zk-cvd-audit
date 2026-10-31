@@ -1,0 +1,73 @@
+{
+ "canonical": "{\"disclosure\":\"verdict\",\"name\":\"Q1\",\"norms\":[{\"atoms\":[{\"pred\":[],\"type\":\"advisory\"},{\"pred\":[],\"type\":\"disclosure\"}],\"delta\":[[0,2,1],[1,1,1],[2,2,2]],\"init\":0,\"kind\":\"chain\",\"letter_of_mask\":[0,1,2,-1],\"letters\":[[\"other\"],[\"advisory\"],[\"disclosure\"]],\"m\":0,\"name\":\"embargo\",\"out\":[[0,false],[0,true],[1,true]]}],\"role\":\"vendor\"}",
+ "disclosure": "verdict",
+ "id": "ff6c0c5137469e644e3ad12a637ae97ab8b458d67d3f98f468be04ce056095a3",
+ "name": "Q1",
+ "norms": [
+  {
+   "atoms": [
+    {
+     "pred": [],
+     "type": "advisory"
+    },
+    {
+     "pred": [],
+     "type": "disclosure"
+    }
+   ],
+   "delta": [
+    [
+     0,
+     2,
+     1
+    ],
+    [
+     1,
+     1,
+     1
+    ],
+    [
+     2,
+     2,
+     2
+    ]
+   ],
+   "init": 0,
+   "kind": "chain",
+   "letter_of_mask": [
+    0,
+    1,
+    2,
+    -1
+   ],
+   "letters": [
+    [
+     "other"
+    ],
+    [
+     "advisory"
+    ],
+    [
+     "disclosure"
+    ]
+   ],
+   "m": 0,
+   "name": "embargo",
+   "out": [
+    [
+     0,
+     false
+    ],
+    [
+     0,
+     true
+    ],
+    [
+     1,
+     true
+    ]
+   ]
+  }
+ ],
+ "role": "vendor"
+}

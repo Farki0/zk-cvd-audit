@@ -1,0 +1,10 @@
+{
+ "guest_image_ids": {
+  "agg": "e62ec60426303309a53b90030c12805f1064cb430d087ba970cefadc3c5e8c1e",
+  "chain": "808fae120c7b9a58e181aab68a361d87fe4544d72cb893fce54e970c26e360f3",
+  "full": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+  "iface": "35fc03a996e5f657a8544485090da95414c7a6e90595947e37f86be2979bf606"
+ },
+ "risc0_zkvm_crate": "3.0.6",
+ "note": "cycles = user cycles (instructions executed); padded_cycles = sum of 2^po2 over segments"
+}

@@ -1,0 +1,81 @@
+{
+ "S1": {
+  "Q1": {
+   "verdict": "complied"
+  },
+  "Q2": {
+   "verdict": "violated"
+  },
+  "Q3": {
+   "per_org": {
+    "vendorA": "complied",
+    "vendorB": "repaired",
+    "vendorC": "violated"
+   },
+   "verdict": "violated"
+  },
+  "Q4": {
+   "verdict": "complied"
+  },
+  "Q5": {
+   "per_org": {
+    "vendorA": "complied",
+    "vendorB": "complied",
+    "vendorC": "complied"
+   },
+   "verdict": "complied"
+  }
+ },
+ "S2": {
+  "Q1": {
+   "verdict": "violated"
+  },
+  "Q2": {
+   "verdict": "complied"
+  },
+  "Q3": {
+   "per_org": {
+    "vendorA": "complied",
+    "vendorB": "complied"
+   },
+   "verdict": "complied"
+  },
+  "Q4": {
+   "verdict": "complied"
+  },
+  "Q5": {
+   "per_org": {
+    "vendorA": "complied",
+    "vendorB": "complied"
+   },
+   "verdict": "complied"
+  }
+ },
+ "S3": {
+  "Q1": {
+   "verdict": "complied"
+  },
+  "Q2": {
+   "verdict": "open"
+  },
+  "Q3": {
+   "per_org": {
+    "vendorA": "complied",
+    "vendorB": "repaired",
+    "vendorC": "open"
+   },
+   "verdict": "open"
+  },
+  "Q4": {
+   "verdict": "complied"
+  },
+  "Q5": {
+   "per_org": {
+    "vendorA": "complied",
+    "vendorB": "complied",
+    "vendorC": "complied"
+   },
+   "verdict": "complied"
+  }
+ }
+}

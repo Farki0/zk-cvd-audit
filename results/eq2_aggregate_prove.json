@@ -1,0 +1,70 @@
+{
+ "what": "S1 under Q2, real proofs on the development machine (2026-10-26); organisation receipts composite (run before the switch to succinct), leak check by journal bytes",
+ "env": {
+  "RISC0_DEV_MODE": null,
+  "cargo_lock_sha256": "46b472085ce8b05d011cce89e24f82e209c9cfdecef4c56ddd52751f9d1b3592",
+  "cpu_model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+  "date_utc": "2026-10-26T16:24:25+00:00",
+  "dev_mode_checked_off": true,
+  "dev_mode_env": null,
+  "dev_mode_off": true,
+  "git_commit": "831de2086c30659592062df36a0a75161e91acd5",
+  "git_dirty": true,
+  "guest_image_ids": {
+   "agg": "0e00db990a58ea581dcd4033319e91b0101b43bd67503ba6ed38ad6bcbbd5e05",
+   "chain": "837aa3d4c2224fc2c88b21385149dc1bd1887fc2702e299a7323b5230a100ac3",
+   "full": "d2a318942c93105b0422c06b89496f5ba5bb3d5556aae253050fab31e6659365",
+   "iface": "1e05c62c739b3353c880a95bd2f8b4a3b6575c73132ebc745dd7e2a09b50f142"
+  },
+  "kernel": "6.18.54.1-microsoft-standard-WSL2",
+  "logical_threads": 12,
+  "os": "Ubuntu 24.04.4 LTS",
+  "physical_cores": 6,
+  "prover_backend": "CPU (risc0-zkvm local prover, no cuda/metal feature)",
+  "python": "3.12.3",
+  "r0vm": "risc0-r0vm 3.0.6",
+  "ram_mb": 9947.0,
+  "risc0_zkvm_crate": "3.0.6",
+  "rustc_host": "rustc 1.94.1 (e408947bf 2026-03-25)",
+  "zkvm": "RISC Zero"
+ },
+ "aggregate": {
+  "composite": {
+   "auditor_output": {
+    "verdict": "violated"
+   },
+   "cycles": 1572864,
+   "leak": {
+    "embedded_assumption_receipts": 4,
+    "leaks": true,
+    "org_journals_readable": [
+     "maintainer",
+     "vendorA",
+     "vendorB",
+     "vendorC"
+    ],
+    "receipt_kind": "composite"
+   },
+   "prove_s": 755.138824809,
+   "receipt_bytes": 1594255,
+   "receipt_kind": "composite",
+   "verify_s": 0.142353509
+  },
+  "succinct": {
+   "auditor_output": {
+    "verdict": "violated"
+   },
+   "cycles": 1572864,
+   "leak": {
+    "embedded_assumption_receipts": 0,
+    "leaks": false,
+    "org_journals_readable": [],
+    "receipt_kind": "succinct"
+   },
+   "prove_s": 1060.305746414,
+   "receipt_bytes": 224268,
+   "receipt_kind": "succinct",
+   "verify_s": 0.026501895
+  }
+ }
+}

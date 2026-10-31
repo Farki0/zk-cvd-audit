@@ -1,0 +1,162 @@
+{
+ "run": "runs/eval-20261030-202508",
+ "env": {
+  "RISC0_DEV_MODE": null,
+  "cargo_lock_sha256": "ef0a9b7d1c3196296564d0add1e1b1fd987b289a645ac7268c43191eb875fbfa",
+  "cpu_model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+  "date_utc": "2026-10-30T19:25:08+00:00",
+  "dev_mode_checked_off": true,
+  "dev_mode_env": null,
+  "dev_mode_off": true,
+  "git_commit": "90125d729af390619ca6f29d509ef21db0b695b1",
+  "git_dirty": true,
+  "guest_image_ids": {
+   "agg": "e62ec60426303309a53b90030c12805f1064cb430d087ba970cefadc3c5e8c1e",
+   "chain": "808fae120c7b9a58e181aab68a361d87fe4544d72cb893fce54e970c26e360f3",
+   "full": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+   "iface": "35fc03a996e5f657a8544485090da95414c7a6e90595947e37f86be2979bf606"
+  },
+  "kernel": "6.18.54.1-microsoft-standard-WSL2",
+  "logical_threads": 12,
+  "os": "Ubuntu 24.04.4 LTS",
+  "physical_cores": 6,
+  "prover_backend": "CPU: r0vm child process (risc0-zkvm ExternalProver 'ipc'; no cuda/metal)",
+  "python": "3.12.3",
+  "r0vm": "risc0-r0vm 3.0.6",
+  "ram_mb": 9947.0,
+  "risc0_server_path_env": null,
+  "risc0_zkvm_crate": "3.0.6",
+  "rustc_host": "rustc 1.94.1 (e408947bf 2026-03-25)",
+  "zkvm": "RISC Zero"
+ },
+ "parts": {
+  "eq2": {
+   "status": "passed",
+   "seconds": 47
+  },
+  "eq1_diff": {
+   "status": "passed",
+   "seconds": 291
+  },
+  "collusion": {
+   "status": "passed",
+   "seconds": 8
+  },
+  "cycles": {
+   "status": "passed",
+   "seconds": 6
+  },
+  "cost_extra": {
+   "status": "passed",
+   "seconds": 12
+  },
+  "acceptance": {
+   "status": "passed",
+   "seconds": 13
+  }
+ },
+ "EQ1_vectors": {
+  "journals": "55/55",
+  "audits": "15/15",
+  "aggregates": "9/9",
+  "attacks_as_expected": "12/12",
+  "real_proofs": false
+ },
+ "EQ1_differential": {
+  "runs": 1467,
+  "journals_compared": 5189,
+  "vendor_verdicts_compared": 3722,
+  "audits_compared": 1467,
+  "mismatches": 0,
+  "by_part": {
+   "G": {
+    "audits": 450,
+    "histories": 450,
+    "journals": 1539,
+    "mismatches": 0,
+    "runs": 450,
+    "vendor_verdicts": 1089,
+    "verdicts_seen": {
+     "complied": 350,
+     "open": 268,
+     "repaired": 119,
+     "violated": 352
+    }
+   },
+   "R": {
+    "audits": 960,
+    "histories": 120,
+    "journals": 3336,
+    "mismatches": 0,
+    "runs": 960,
+    "vendor_verdicts": 2376,
+    "verdicts_seen": {
+     "complied": 955,
+     "open": 113,
+     "repaired": 352,
+     "violated": 956
+    }
+   },
+   "S": {
+    "audits": 42,
+    "histories": 9,
+    "journals": 259,
+    "mismatches": 0,
+    "runs": 42,
+    "vendor_verdicts": 217,
+    "verdicts_seen": {
+     "complied": 165,
+     "repaired": 22,
+     "violated": 30
+    }
+   },
+   "V": {
+    "audits": 15,
+    "histories": 3,
+    "journals": 55,
+    "mismatches": 0,
+    "runs": 15,
+    "vendor_verdicts": 40,
+    "verdicts_seen": {
+     "complied": 31,
+     "open": 2,
+     "repaired": 4,
+     "violated": 3
+    }
+   }
+  }
+ },
+ "EQ2": {
+  "views_checked": 175,
+  "views_equal_to_simulation": 175,
+  "findings_by_class": {
+   "unexpected": 0
+  },
+  "views_by_class": {
+   "unexpected": 0
+  },
+  "journal_size_constant_less_instance_id": true,
+  "pairs": [
+   {
+    "as_expected": true,
+    "declared_outputs_equal": true,
+    "expected": "equal views",
+    "statement": "Q2",
+    "views_equal_up_to_public": true
+   },
+   {
+    "as_expected": true,
+    "declared_outputs_equal": false,
+    "expected": "views differ exactly in the declared output",
+    "statement": "Q3",
+    "views_equal_up_to_public": false
+   }
+  ],
+  "aggregate_receipt": null
+ },
+ "D13_collusion": {
+  "cases": 22,
+  "as_predicted": 22,
+  "accepted_cases": 8
+ }
+}

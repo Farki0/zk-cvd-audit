@@ -1,0 +1,2 @@
+# only needed by reference/code/vectors.py (Ed25519 keys and signatures of the vectors)
+cryptography==41.0.7

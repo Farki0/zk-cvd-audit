@@ -1,0 +1,7 @@
+"# cost_extra.py (executor/native, no proofs)"
+filler_bytes,internal_record_bytes,records,user_cycles,padded_cycles,segments
+0,21,128,833779,1048576,1
+16,47,128,919464,1048576,1
+64,95,128,977947,1179648,2
+256,287,128,1397936,1572864,2
+1024,1055,128,2847202,3211264,4

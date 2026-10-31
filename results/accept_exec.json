@@ -1,0 +1,792 @@
+{
+  "aggregates_ok": 9,
+  "aggregates_total": 9,
+  "audits_equal": 15,
+  "audits_total": 15,
+  "journals_equal": 55,
+  "journals_total": 55,
+  "real_proofs": false,
+  "rows": [
+    {
+      "aggregate": {
+        "auditor_output": {
+          "verdict": "complied"
+        },
+        "auditor_output_equal": true,
+        "cycles": 1455765,
+        "journal": {
+          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "heads": {
+            "maintainer": "c3dde1a77279097b175ac00481166f29741d539ce9d0270a51d447af4aa11b0c",
+            "vendorA": "34d408389b1c6c29213c6aae627692275e7295450ed7a0150442b84603680f3b",
+            "vendorB": "abb249562f592bab3a7d9176b005dee99123baf923817ea76632c69eedff8adf",
+            "vendorC": "056acac33e73c54f2112c42df33beb1efaad79a7cafbcee0c9a45df4a4ac6965"
+          },
+          "instance": "CVD-2026-0001",
+          "pdigest": "8843f08b56c1ddf7c9083046a3c313344408f2333b9816f641f82125a04673a2",
+          "sid": "ff6c0c5137469e644e3ad12a637ae97ab8b458d67d3f98f468be04ce056095a3",
+          "verdict": "complied"
+        },
+        "journal_equal": true,
+        "pass": true
+      },
+      "audit_equal": true,
+      "audit_expected": {
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 13,
+          "seconds": 0.057467925
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 6,
+          "seconds": 0.051865487
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 7,
+          "seconds": 0.052061492
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 5,
+          "seconds": 0.051658481
+        }
+      ],
+      "scenario": "S1",
+      "statement": "Q1"
+    },
+    {
+      "aggregate": {
+        "auditor_output": {
+          "verdict": "violated"
+        },
+        "auditor_output_equal": true,
+        "cycles": 1456712,
+        "journal": {
+          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "heads": {
+            "maintainer": "c3dde1a77279097b175ac00481166f29741d539ce9d0270a51d447af4aa11b0c",
+            "vendorA": "34d408389b1c6c29213c6aae627692275e7295450ed7a0150442b84603680f3b",
+            "vendorB": "abb249562f592bab3a7d9176b005dee99123baf923817ea76632c69eedff8adf",
+            "vendorC": "056acac33e73c54f2112c42df33beb1efaad79a7cafbcee0c9a45df4a4ac6965"
+          },
+          "instance": "CVD-2026-0001",
+          "pdigest": "8843f08b56c1ddf7c9083046a3c313344408f2333b9816f641f82125a04673a2",
+          "sid": "450928a828e882896566936ec3c0652d2fcfa47c2d6f42717103098cd457b968",
+          "verdict": "violated"
+        },
+        "journal_equal": true,
+        "pass": true
+      },
+      "audit_equal": true,
+      "audit_expected": {
+        "verdict": "violated"
+      },
+      "audit_got": {
+        "verdict": "violated"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 13,
+          "seconds": 0.056991024
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 6,
+          "seconds": 0.051661582
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 7,
+          "seconds": 0.051179068
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 5,
+          "seconds": 0.051308372
+        }
+      ],
+      "scenario": "S1",
+      "statement": "Q2"
+    },
+    {
+      "audit_equal": true,
+      "audit_expected": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "repaired",
+          "vendorC": "violated"
+        },
+        "verdict": "violated"
+      },
+      "audit_got": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "repaired",
+          "vendorC": "violated"
+        },
+        "verdict": "violated"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 13,
+          "seconds": 0.057530175
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 6,
+          "seconds": 0.050783679
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 7,
+          "seconds": 0.052566984
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 5,
+          "seconds": 0.051356513
+        }
+      ],
+      "scenario": "S1",
+      "statement": "Q3"
+    },
+    {
+      "aggregate": {
+        "auditor_output": {
+          "verdict": "complied"
+        },
+        "auditor_output_equal": true,
+        "cycles": 1455748,
+        "journal": {
+          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "heads": {
+            "maintainer": "c3dde1a77279097b175ac00481166f29741d539ce9d0270a51d447af4aa11b0c",
+            "vendorA": "34d408389b1c6c29213c6aae627692275e7295450ed7a0150442b84603680f3b",
+            "vendorB": "abb249562f592bab3a7d9176b005dee99123baf923817ea76632c69eedff8adf",
+            "vendorC": "056acac33e73c54f2112c42df33beb1efaad79a7cafbcee0c9a45df4a4ac6965"
+          },
+          "instance": "CVD-2026-0001",
+          "pdigest": "8843f08b56c1ddf7c9083046a3c313344408f2333b9816f641f82125a04673a2",
+          "sid": "01e79f3d3c8b8cc86638643930ee5d98d718e9e5611d5af3e6c6e988f08ddf92",
+          "verdict": "complied"
+        },
+        "journal_equal": true,
+        "pass": true
+      },
+      "audit_equal": true,
+      "audit_expected": {
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 13,
+          "seconds": 0.05640891
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 6,
+          "seconds": 0.051047396
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 7,
+          "seconds": 0.051063896
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 5,
+          "seconds": 0.050135442
+        }
+      ],
+      "scenario": "S1",
+      "statement": "Q4"
+    },
+    {
+      "audit_equal": true,
+      "audit_expected": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "complied",
+          "vendorC": "complied"
+        },
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "complied",
+          "vendorC": "complied"
+        },
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 13,
+          "seconds": 0.056294703
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 6,
+          "seconds": 0.051363114
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 7,
+          "seconds": 0.051723535
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 5,
+          "seconds": 0.050360177
+        }
+      ],
+      "scenario": "S1",
+      "statement": "Q5"
+    },
+    {
+      "aggregate": {
+        "auditor_output": {
+          "verdict": "violated"
+        },
+        "auditor_output_equal": true,
+        "cycles": 995385,
+        "journal": {
+          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "heads": {
+            "maintainer": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+            "vendorA": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+            "vendorB": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0"
+          },
+          "instance": "CVD-2026-0002",
+          "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+          "sid": "ff6c0c5137469e644e3ad12a637ae97ab8b458d67d3f98f468be04ce056095a3",
+          "verdict": "violated"
+        },
+        "journal_equal": true,
+        "pass": true
+      },
+      "audit_equal": true,
+      "audit_expected": {
+        "verdict": "violated"
+      },
+      "audit_got": {
+        "verdict": "violated"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 9,
+          "seconds": 0.05375994
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 7,
+          "seconds": 0.050819273
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.051159495
+        }
+      ],
+      "scenario": "S2",
+      "statement": "Q1"
+    },
+    {
+      "aggregate": {
+        "auditor_output": {
+          "verdict": "complied"
+        },
+        "auditor_output_equal": true,
+        "cycles": 996206,
+        "journal": {
+          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "heads": {
+            "maintainer": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+            "vendorA": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+            "vendorB": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0"
+          },
+          "instance": "CVD-2026-0002",
+          "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+          "sid": "450928a828e882896566936ec3c0652d2fcfa47c2d6f42717103098cd457b968",
+          "verdict": "complied"
+        },
+        "journal_equal": true,
+        "pass": true
+      },
+      "audit_equal": true,
+      "audit_expected": {
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 9,
+          "seconds": 0.05519874
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 7,
+          "seconds": 0.051678381
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.053707606
+        }
+      ],
+      "scenario": "S2",
+      "statement": "Q2"
+    },
+    {
+      "audit_equal": true,
+      "audit_expected": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "complied"
+        },
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "complied"
+        },
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 9,
+          "seconds": 0.055263262
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 7,
+          "seconds": 0.051977788
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.05223518
+        }
+      ],
+      "scenario": "S2",
+      "statement": "Q3"
+    },
+    {
+      "aggregate": {
+        "auditor_output": {
+          "verdict": "complied"
+        },
+        "auditor_output_equal": true,
+        "cycles": 995291,
+        "journal": {
+          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "heads": {
+            "maintainer": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
+            "vendorA": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
+            "vendorB": "1169d2c90b7bff32fd48b81a7f253cf42b435fb4e267f272eb91d8fc45532cb0"
+          },
+          "instance": "CVD-2026-0002",
+          "pdigest": "6e4a5440501ec2a20bc76f9e762318621c9d82d1bb0b6cf76238407d0762fdf4",
+          "sid": "01e79f3d3c8b8cc86638643930ee5d98d718e9e5611d5af3e6c6e988f08ddf92",
+          "verdict": "complied"
+        },
+        "journal_equal": true,
+        "pass": true
+      },
+      "audit_equal": true,
+      "audit_expected": {
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 9,
+          "seconds": 0.054984942
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 7,
+          "seconds": 0.051102208
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.051369711
+        }
+      ],
+      "scenario": "S2",
+      "statement": "Q4"
+    },
+    {
+      "audit_equal": true,
+      "audit_expected": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "complied"
+        },
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "complied"
+        },
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 9,
+          "seconds": 0.054148983
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 7,
+          "seconds": 0.055146268
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.050982361
+        }
+      ],
+      "scenario": "S2",
+      "statement": "Q5"
+    },
+    {
+      "aggregate": {
+        "auditor_output": {
+          "verdict": "complied"
+        },
+        "auditor_output_equal": true,
+        "cycles": 1160452,
+        "journal": {
+          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "heads": {
+            "maintainer": "194844ee172f2fc3836ed3f6b3dc534560ce3895d301309ea0bcf2905c7f0565",
+            "vendorA": "36d0587ea5b781a18e7390713329a091e072ab9bce3d9b34f6af7c88b756f94e",
+            "vendorB": "dda30508972073790d8cd311f166913efb784c51cc8328c095e606130537b7b7",
+            "vendorC": "140ac094fcd28e82ecb8aa5e4de4a3acd662f9107f32a032cc516a64a06abe52"
+          },
+          "instance": "CVD-2026-0003",
+          "pdigest": "8843f08b56c1ddf7c9083046a3c313344408f2333b9816f641f82125a04673a2",
+          "sid": "ff6c0c5137469e644e3ad12a637ae97ab8b458d67d3f98f468be04ce056095a3",
+          "verdict": "complied"
+        },
+        "journal_equal": true,
+        "pass": true
+      },
+      "audit_equal": true,
+      "audit_expected": {
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 10,
+          "seconds": 0.054623466
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 5,
+          "seconds": 0.051229457
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.054136278
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 4,
+          "seconds": 0.054336756
+        }
+      ],
+      "scenario": "S3",
+      "statement": "Q1"
+    },
+    {
+      "aggregate": {
+        "auditor_output": {
+          "verdict": "open"
+        },
+        "auditor_output_equal": true,
+        "cycles": 1159820,
+        "journal": {
+          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "heads": {
+            "maintainer": "194844ee172f2fc3836ed3f6b3dc534560ce3895d301309ea0bcf2905c7f0565",
+            "vendorA": "36d0587ea5b781a18e7390713329a091e072ab9bce3d9b34f6af7c88b756f94e",
+            "vendorB": "dda30508972073790d8cd311f166913efb784c51cc8328c095e606130537b7b7",
+            "vendorC": "140ac094fcd28e82ecb8aa5e4de4a3acd662f9107f32a032cc516a64a06abe52"
+          },
+          "instance": "CVD-2026-0003",
+          "pdigest": "8843f08b56c1ddf7c9083046a3c313344408f2333b9816f641f82125a04673a2",
+          "sid": "450928a828e882896566936ec3c0652d2fcfa47c2d6f42717103098cd457b968",
+          "verdict": "open"
+        },
+        "journal_equal": true,
+        "pass": true
+      },
+      "audit_equal": true,
+      "audit_expected": {
+        "verdict": "open"
+      },
+      "audit_got": {
+        "verdict": "open"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 10,
+          "seconds": 0.056896639
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 5,
+          "seconds": 0.051707401
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.052123573
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 4,
+          "seconds": 0.054501352
+        }
+      ],
+      "scenario": "S3",
+      "statement": "Q2"
+    },
+    {
+      "audit_equal": true,
+      "audit_expected": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "repaired",
+          "vendorC": "open"
+        },
+        "verdict": "open"
+      },
+      "audit_got": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "repaired",
+          "vendorC": "open"
+        },
+        "verdict": "open"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 10,
+          "seconds": 0.053685716
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 5,
+          "seconds": 0.051470504
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.05134045
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 4,
+          "seconds": 0.055494461
+        }
+      ],
+      "scenario": "S3",
+      "statement": "Q3"
+    },
+    {
+      "aggregate": {
+        "auditor_output": {
+          "verdict": "complied"
+        },
+        "auditor_output_equal": true,
+        "cycles": 1160461,
+        "journal": {
+          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "heads": {
+            "maintainer": "194844ee172f2fc3836ed3f6b3dc534560ce3895d301309ea0bcf2905c7f0565",
+            "vendorA": "36d0587ea5b781a18e7390713329a091e072ab9bce3d9b34f6af7c88b756f94e",
+            "vendorB": "dda30508972073790d8cd311f166913efb784c51cc8328c095e606130537b7b7",
+            "vendorC": "140ac094fcd28e82ecb8aa5e4de4a3acd662f9107f32a032cc516a64a06abe52"
+          },
+          "instance": "CVD-2026-0003",
+          "pdigest": "8843f08b56c1ddf7c9083046a3c313344408f2333b9816f641f82125a04673a2",
+          "sid": "01e79f3d3c8b8cc86638643930ee5d98d718e9e5611d5af3e6c6e988f08ddf92",
+          "verdict": "complied"
+        },
+        "journal_equal": true,
+        "pass": true
+      },
+      "audit_equal": true,
+      "audit_expected": {
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 10,
+          "seconds": 0.057453268
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 5,
+          "seconds": 0.050041515
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.055208043
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 4,
+          "seconds": 0.049788711
+        }
+      ],
+      "scenario": "S3",
+      "statement": "Q4"
+    },
+    {
+      "audit_equal": true,
+      "audit_expected": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "complied",
+          "vendorC": "complied"
+        },
+        "verdict": "complied"
+      },
+      "audit_got": {
+        "per_org": {
+          "vendorA": "complied",
+          "vendorB": "complied",
+          "vendorC": "complied"
+        },
+        "verdict": "complied"
+      },
+      "orgs": [
+        {
+          "journal_equal": true,
+          "org": "maintainer",
+          "records": 10,
+          "seconds": 0.053821999
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorA",
+          "records": 5,
+          "seconds": 0.050651815
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorB",
+          "records": 6,
+          "seconds": 0.051134225
+        },
+        {
+          "journal_equal": true,
+          "org": "vendorC",
+          "records": 4,
+          "seconds": 0.056610016
+        }
+      ],
+      "scenario": "S3",
+      "statement": "Q5"
+    }
+  ],
+  "scenarios": [
+    "S1",
+    "S2",
+    "S3"
+  ]
+}

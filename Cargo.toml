@@ -1,0 +1,11 @@
+[workspace]
+members = ["core", "host", "methods"]
+resolver = "2"
+
+[profile.release]
+opt-level = 3
+debug = false
+
+# The guest binaries are compiled by risc0-build; keep the host fast too.
+[profile.dev]
+opt-level = 3

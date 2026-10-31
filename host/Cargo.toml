@@ -1,0 +1,16 @@
+[package]
+name = "host"
+version = "0.1.0"
+edition = "2021"
+default-run = "host"
+
+[dependencies]
+audit-core = { path = "../core" }
+methods = { path = "../methods" }
+risc0-zkvm = { version = "=3.0.6" }
+risc0-circuit-recursion = "=4.0.5"   # the control ids of the recursion programs (check 1, see prove_org)
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+bincode = "1"
+clap = { version = "4", features = ["derive"] }
+ed25519-dalek = "2"

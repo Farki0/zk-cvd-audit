@@ -1,0 +1,36 @@
+{
+ "norm": "O(payment <= due)  (x)  O(payment[penalty=paid] <= final_notice)",
+ "verdicts": {
+  "on time": {
+   "verdict": "complied",
+   "rank": 0,
+   "settled": true
+  },
+  "late, penalty paid": {
+   "verdict": "repaired",
+   "rank": 1,
+   "settled": true
+  },
+  "late, no penalty": {
+   "verdict": "violated",
+   "rank": 2,
+   "settled": true
+  },
+  "late, penalty paid, no final notice yet": {
+   "verdict": "repaired",
+   "rank": 1,
+   "settled": true
+  },
+  "nothing after the due date": {
+   "verdict": "repaired",
+   "rank": 1,
+   "settled": false
+  }
+ },
+ "states": 5,
+ "table_entries": 25,
+ "slices_compared": 3906,
+ "mismatches": 0,
+ "max_length": 5,
+ "scope": "reference model only (audit_ref.py); not run through the prover"
+}

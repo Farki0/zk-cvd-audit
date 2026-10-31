@@ -1,0 +1,144 @@
+{
+ "canonical": "{\"disclosure\":\"verdict\",\"name\":\"Q2\",\"norms\":[{\"atoms\":[{\"pred\":[],\"type\":\"disclosure\"},{\"pred\":[],\"type\":\"grace_end\"},{\"pred\":[],\"type\":\"mitigation\"},{\"pred\":[[\"coverage\",\"=\",\"full\"]],\"type\":\"patch\"}],\"delta\":[[0,2,0,0,1],[1,1,1,1,1],[3,3,3,5,4],[3,3,3,3,3],[4,4,4,4,4],[5,5,3,5,4]],\"init\":0,\"kind\":\"chain\",\"letter_of_mask\":[0,1,2,-1,3,-1,-1,-1,4,-1,-1,-1,-1,-1,-1,-1],\"letters\":[[\"other\"],[\"disclosure\"],[\"grace_end\"],[\"mitigation\"],[\"patch[coverage=full]\"]],\"m\":1,\"name\":\"patch_duty\",\"out\":[[0,false],[0,true],[1,false],[2,true],[1,true],[1,false]]}],\"role\":\"vendor\"}",
+ "disclosure": "verdict",
+ "id": "450928a828e882896566936ec3c0652d2fcfa47c2d6f42717103098cd457b968",
+ "name": "Q2",
+ "norms": [
+  {
+   "atoms": [
+    {
+     "pred": [],
+     "type": "disclosure"
+    },
+    {
+     "pred": [],
+     "type": "grace_end"
+    },
+    {
+     "pred": [],
+     "type": "mitigation"
+    },
+    {
+     "pred": [
+      [
+       "coverage",
+       "=",
+       "full"
+      ]
+     ],
+     "type": "patch"
+    }
+   ],
+   "delta": [
+    [
+     0,
+     2,
+     0,
+     0,
+     1
+    ],
+    [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    [
+     3,
+     3,
+     3,
+     5,
+     4
+    ],
+    [
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    [
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    [
+     5,
+     5,
+     3,
+     5,
+     4
+    ]
+   ],
+   "init": 0,
+   "kind": "chain",
+   "letter_of_mask": [
+    0,
+    1,
+    2,
+    -1,
+    3,
+    -1,
+    -1,
+    -1,
+    4,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+   ],
+   "letters": [
+    [
+     "other"
+    ],
+    [
+     "disclosure"
+    ],
+    [
+     "grace_end"
+    ],
+    [
+     "mitigation"
+    ],
+    [
+     "patch[coverage=full]"
+    ]
+   ],
+   "m": 1,
+   "name": "patch_duty",
+   "out": [
+    [
+     0,
+     false
+    ],
+    [
+     0,
+     true
+    ],
+    [
+     1,
+     false
+    ],
+    [
+     2,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     false
+    ]
+   ]
+  }
+ ],
+ "role": "vendor"
+}
