@@ -39,7 +39,7 @@ Install and the measurement procedure for another machine: **MEASURE.md**.
 | `docs/EVALUATION.md` | what each evaluation script checks, its result, and which file backs which claim of Chapter 6 |
 | `results/cycles.csv` | executor-only cycles, segments, journal size |
 
-## Design decisions
+## Design notes
 
 * **How the statement reaches the guest.** As a public input (the `canonical` bytes). The guest hashes it into the
   statement id in the journal. One program image id serves all statements; the auditor compares `sid` with the id it
