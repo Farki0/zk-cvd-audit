@@ -82,11 +82,11 @@ def main():
                     inst = f'COAL-n{n}-p{pos}-{serve}-{target}'
                     sl, parts = K.run_cvd(inst, plans, order=vendors, serve=serve)
                     honest_scn = K.scenario_of(inst + ' honest', inst, sl, parts)
-                    before = K.host('exec-all', '--stmt', st['_path'], '--scenario', K.dump(honest_scn, f'{K.WORK}/d13/{inst}-0.json'))['audit']
+                    before = K.host('exec-all', '--stmt', st['_path'], '--scenario', K.dump(honest_scn, f'{K.WORK}/coalition/{inst}-0.json'))['audit']
                     new, at = rewrite(inst, sl, colluder, target)
                     accepted_pred, why = predict(sl, colluder, at)
                     scn = K.scenario_of(inst, inst, new, parts)
-                    got = K.host('exec-all', '--stmt', st['_path'], '--scenario', K.dump(scn, f'{K.WORK}/d13/{inst}-1.json'))
+                    got = K.host('exec-all', '--stmt', st['_path'], '--scenario', K.dump(scn, f'{K.WORK}/coalition/{inst}-1.json'))
                     aborted = [o for o, x in got['orgs'].items() if 'aborted' in x]
                     aud = got['audit']
                     accepted = aud is not None and 'rejected' not in aud
