@@ -366,7 +366,8 @@ def main():
     envinfo.write(a.run_dir)                                  # aborts if dev mode is on
     with open(f'{a.run_dir}/commands.log', 'a') as f:          # which plan and options produced the rows
         f.write(json.dumps({'utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'argv': sys.argv[1:],
-                            'resolved': {k: v for k, v in vars(a).items() if k != 'dry_run'}}) + '\n')
+                            'resolved': {k: (os.path.relpath(v, ROOT) if k == 'run_dir' else v)   # no machine paths
+                                         for k, v in vars(a).items() if k != 'dry_run'}}) + '\n')
     log(f'run directory {a.run_dir} (plan {a.plan})')
     execute(groups, Store(a.run_dir), a)
     log('done')

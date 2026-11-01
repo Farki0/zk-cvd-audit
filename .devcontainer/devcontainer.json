@@ -1,0 +1,9 @@
+{
+  "name": "zk-cvd-audit",
+  "build": { "dockerfile": "../Dockerfile", "context": ".." },
+  "containerUser": "ubuntu",
+  "updateRemoteUserUID": true,
+  "containerEnv": { "HOME": "/root" },
+  "customizations": { "vscode": { "extensions": ["rust-lang.rust-analyzer", "ms-python.python"] } },
+  "postCreateCommand": "just --list"
+}

@@ -13,16 +13,17 @@ the aggregation guest and the scripts that produce every number of the chapter.
 
 ```bash
 docker build -t cvd-audit .
-docker run --rm -v "$PWD/out:/out" cvd-audit smoke             # minutes: build check + executor-only acceptance
-docker run --rm -v "$PWD/out:/out" cvd-audit reproduce         # about 10 min: the evaluation without proofs
-docker run --rm -v "$PWD/out:/out" cvd-audit reproduce-prove   # about 12 h: real proofs; 16 GB RAM
+docker run --rm --user "$(id -u):$(id -g)" -v "$PWD/out:/out" cvd-audit smoke             # minutes: build check + executor-only acceptance
+docker run --rm --user "$(id -u):$(id -g)" -v "$PWD/out:/out" cvd-audit reproduce         # about 10 min: the evaluation without proofs
+docker run --rm --user "$(id -u):$(id -g)" -v "$PWD/out:/out" cvd-audit reproduce-prove   # about 12 h: real proofs; 16 GB RAM
 ```
 
 Without Docker, from this directory: `just smoke`, `just reproduce`, `just reproduce-prove` (the commands behind them
 are in `scripts/reproduce.sh`). Pinned: Rust 1.94.1 for the host (`rust-toolchain.toml`), RISC Zero `cargo-risczero 3.0.6`,
 `r0vm 3.0.6`, rzup `rust 1.97.0`, `cpp 2024.1.5`, `cryptography 41.0.7` (`requirements.txt`), `Cargo.lock`.
-The image was written together with the thesis but has not yet been built by the author; if it fails, the install steps
-of `MEASURE.md` section 1 are the reference.
+The image was built and passed `reproduce --smoke` on 2026-11-01 (Docker 29.9.2, also as a non-root user and in the dev
+container); `reproduce` and `reproduce-prove` have not been run in it. If it fails, the install steps of `MEASURE.md`
+section 1 are the reference.
 
 ## Results map
 
