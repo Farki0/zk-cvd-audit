@@ -1,29 +1,29 @@
 {
- "run": "runs/eval-20261030-202508",
+ "run": "runs/eval-20261031-114118",
  "env": {
   "RISC0_DEV_MODE": null,
   "cargo_lock_sha256": "ef0a9b7d1c3196296564d0add1e1b1fd987b289a645ac7268c43191eb875fbfa",
-  "cpu_model": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "date_utc": "2026-10-30T19:25:08+00:00",
+  "cpu_model": "AMD Ryzen 9 7950X3D 16-Core Processor",
+  "date_utc": "2026-10-31T10:41:18+00:00",
   "dev_mode_checked_off": true,
   "dev_mode_env": null,
   "dev_mode_off": true,
-  "git_commit": "90125d729af390619ca6f29d509ef21db0b695b1",
-  "git_dirty": true,
+  "git_commit": "d9d4f99fb7534cd5d636a1cfaec7e43e4e206718",
+  "git_dirty": false,
   "guest_image_ids": {
-   "agg": "e62ec60426303309a53b90030c12805f1064cb430d087ba970cefadc3c5e8c1e",
-   "chain": "808fae120c7b9a58e181aab68a361d87fe4544d72cb893fce54e970c26e360f3",
-   "full": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
-   "iface": "35fc03a996e5f657a8544485090da95414c7a6e90595947e37f86be2979bf606"
+   "agg": "9aa6ecc7cf43bb0a20ae03af585ad81d9cf04f8cb7e165c8e88ddcc12d59a793",
+   "chain": "a900a09fd15c812329655c7303129f9ad3e0cf3b2fc2cdeabd930b5e7b02023b",
+   "full": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
+   "iface": "ab851ac50ce82245d7c4ce8c30831e9b026a9fe0d4be8c49b2dea466d5312ec3"
   },
-  "kernel": "6.18.54.1-microsoft-standard-WSL2",
-  "logical_threads": 12,
-  "os": "Ubuntu 24.04.4 LTS",
-  "physical_cores": 6,
+  "kernel": "7.2.8-9-omarchy",
+  "logical_threads": 32,
+  "os": "Omarchy",
+  "physical_cores": 16,
   "prover_backend": "CPU: r0vm child process (risc0-zkvm ExternalProver 'ipc'; no cuda/metal)",
-  "python": "3.12.3",
+  "python": "3.14.7",
   "r0vm": "risc0-r0vm 3.0.6",
-  "ram_mb": 9947.0,
+  "ram_mb": 96159.0,
   "risc0_server_path_env": null,
   "risc0_zkvm_crate": "3.0.6",
   "rustc_host": "rustc 1.94.1 (e408947bf 2026-03-25)",
@@ -32,27 +32,27 @@
  "parts": {
   "eq2": {
    "status": "passed",
-   "seconds": 47
+   "seconds": 29
   },
   "eq1_diff": {
    "status": "passed",
-   "seconds": 291
+   "seconds": 189
   },
   "collusion": {
    "status": "passed",
-   "seconds": 8
+   "seconds": 6
   },
   "cycles": {
    "status": "passed",
-   "seconds": 6
+   "seconds": 4
   },
   "cost_extra": {
    "status": "passed",
-   "seconds": 12
+   "seconds": 7
   },
   "acceptance": {
    "status": "passed",
-   "seconds": 13
+   "seconds": 7
   }
  },
  "EQ1_vectors": {

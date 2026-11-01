@@ -5,7 +5,7 @@ advisors Martin Farkas and Dr. Imre Kocsis). This directory is the prototype and
 the guest program of Algorithm 5.1 on RISC Zero 3.0.6 (CPU prover), the prover host, the auditor (checks 1-7),
 the aggregation guest and the scripts that produce every number of the chapter.
 
-* Version: 1.0.0 (`CITATION.cff`). Every reported number is read from a file in `results/`; the machine, toolchain
+* Version: 1.0.1 (`CITATION.cff`). Every reported number is read from a file in `results/`; the machine, toolchain
   and guest image ids behind it are in `results/*env.json` (see the reproduction limits below).
 * Repository: https://github.com/Farki0/zk-cvd-audit
 
@@ -27,8 +27,8 @@ of `MEASURE.md` section 1 are the reference.
 ## Results map
 
 One row per table or figure of Chapter 6 and its appendix. "Time" is wall-clock on the machine of the real-proof
-runs (AMD Ryzen 9 7950X3D, 16 cores / 32 threads, 96 GB; Omarchy Linux) for the proofs and on an Intel i7-9750H under
-WSL2 for the executor-only parts. The whole real-proof run was about 2 h 18 min (`evaluate.sh` 238 s, dry run 5 s,
+runs (AMD Ryzen 9 7950X3D, 16 cores / 32 threads, 96 GB; Omarchy Linux) for the proofs and for `scripts/evaluate.sh`,
+and on an Intel i7-9750H under WSL2 for the other executor-only parts (each file names its machine in `cpu_model`). The whole real-proof run was about 2 h 18 min (`evaluate.sh` 238 s, dry run 5 s,
 `acceptance_prove.sh` 1435 s, K 456 s, C 465 s, B 1466 s, D 795 s, A 3372 s).
 
 | Thesis item | Command | Output (under `results/`) | Time |
@@ -67,17 +67,18 @@ in the thesis repository; it writes `thesis/tables/*.tex` and `thesis/figures/da
   refuse to start with `RISC0_DEV_MODE` set, and receipts of kind `Fake` are rejected.
 * **Records.** The sweeps pad slices with about 21-byte `work` records. A record of 1,055 bytes costs 3.4 times the
   cycles (`cycles_record_size.csv`); series E measures its proving time.
-* **Guest image ids.** The committed real-proof results (`measurements.csv`, `accept_prove.json`) were made with older
-  guest binaries than the current code (`bench_env.json`: full `b4ee73...`, iface `9d53f2...`, chain `84ca72...`, agg
-  `eff61586...`; the current code, `cycles_env.json`: `2abcd9...`, `35fc03...`, `808fae...`, `e62ec604...`). The thesis
-  says which change this is: the interface entries are sorted (at most 2.8 % more user cycles), and the aggregation
-  journal has a participant digest (at most 0.34 %, no padded cycles). A new measurement run with the current
-  code replaces all of these numbers. An image id also depends on the build environment (the same code gave two ids on two
-  machines), so the check across machines is the user-cycle count, not the id.
+* **Source of the results.** Since version 1.0.1, `results/` holds the files of the measurement run reported in the
+  thesis (AMD Ryzen 9 7950X3D). They were made at commit `d9d4f99` of the development repository, which
+  `bench_env.json` names as `git_commit`. The prototype code of this version (`core/`, `methods/`, `host/`) differs from
+  that commit only in comments, with the same line numbers in the guest code. `git_dirty` is true because the
+  evaluation scripts ran first and rewrote tracked files in `results/` before the first proof.
+* **Guest image ids.** An image id also depends on the build environment (the same code gave two ids on two
+  machines), so the check across machines is the user-cycle count (`cycles.csv`), not the id.
 * **Docker:** the image has no `.git`, so `env.json` records `git_commit: null` there; the version in `CITATION.cff` identifies
   it.
 
 ## Cite
 
-Cite the repository and its version (`CITATION.cff`; Zenodo metadata: `.zenodo.json`).
+Cite the repository and its version (`CITATION.cff`; Zenodo metadata: `.zenodo.json`). Archive: Zenodo,
+https://doi.org/10.5281/zenodo.23839546 (concept DOI; it resolves to the latest version).
 License: MIT, see `LICENSE`.

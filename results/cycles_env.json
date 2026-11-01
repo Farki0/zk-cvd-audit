@@ -1,9 +1,9 @@
 {
  "guest_image_ids": {
-  "agg": "e62ec60426303309a53b90030c12805f1064cb430d087ba970cefadc3c5e8c1e",
-  "chain": "808fae120c7b9a58e181aab68a361d87fe4544d72cb893fce54e970c26e360f3",
-  "full": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
-  "iface": "35fc03a996e5f657a8544485090da95414c7a6e90595947e37f86be2979bf606"
+  "agg": "9aa6ecc7cf43bb0a20ae03af585ad81d9cf04f8cb7e165c8e88ddcc12d59a793",
+  "chain": "a900a09fd15c812329655c7303129f9ad3e0cf3b2fc2cdeabd930b5e7b02023b",
+  "full": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
+  "iface": "ab851ac50ce82245d7c4ce8c30831e9b026a9fe0d4be8c49b2dea466d5312ec3"
  },
  "risc0_zkvm_crate": "3.0.6",
  "note": "cycles = user cycles (instructions executed); padded_cycles = sum of 2^po2 over segments"

@@ -2,7 +2,8 @@ cff-version: 1.2.0
 message: "If you use this artifact, cite the paper and this repository (with its version)."
 title: "Artifact for: Retrospective Auditing of Cross-Organizational Processes with Zero-Knowledge Proofs"
 type: software
-version: 1.0.0
+version: 1.0.1
+doi: 10.5281/zenodo.23839546
 authors:
   - family-names: Farkas
     given-names: Ádám

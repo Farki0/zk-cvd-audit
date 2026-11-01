@@ -13,9 +13,9 @@
           "verdict": "complied"
         },
         "auditor_output_equal": true,
-        "cycles": 1572864,
+        "cycles": 2097152,
         "journal": {
-          "guest_id": "b4ee73ba0f9a9b4f6d258da1ee2c3be8d546043caf02f9b43a3125abcd7341a8",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "c3dde1a77279097b175ac00481166f29741d539ce9d0270a51d447af4aa11b0c",
             "vendorA": "34d408389b1c6c29213c6aae627692275e7295450ed7a0150442b84603680f3b",
@@ -23,6 +23,7 @@
             "vendorC": "056acac33e73c54f2112c42df33beb1efaad79a7cafbcee0c9a45df4a4ac6965"
           },
           "instance": "CVD-2026-0001",
+          "pdigest": "8843f08b56c1ddf7c9083046a3c313344408f2333b9816f641f82125a04673a2",
           "sid": "ff6c0c5137469e644e3ad12a637ae97ab8b458d67d3f98f468be04ce056095a3",
           "verdict": "complied"
         },
@@ -36,8 +37,8 @@
           "receipt_kind": "succinct"
         },
         "pass": true,
-        "prove_s": 109.701355615,
-        "receipt_bytes": 224268,
+        "prove_s": 130.45087349,
+        "receipt_bytes": 224422,
         "receipt_kind": "succinct"
       },
       "audit_equal": true,
@@ -52,25 +53,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 40.910663188
+          "seconds": 38.294926875
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 40.436964721
+          "seconds": 35.970699905000004
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 40.958904667
+          "seconds": 36.086917141
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 39.744022936
+          "seconds": 35.293089913
         }
       ],
       "scenario": "S1",
@@ -84,7 +85,7 @@
         "auditor_output_equal": true,
         "cycles": 2097152,
         "journal": {
-          "guest_id": "b4ee73ba0f9a9b4f6d258da1ee2c3be8d546043caf02f9b43a3125abcd7341a8",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "c3dde1a77279097b175ac00481166f29741d539ce9d0270a51d447af4aa11b0c",
             "vendorA": "34d408389b1c6c29213c6aae627692275e7295450ed7a0150442b84603680f3b",
@@ -92,6 +93,7 @@
             "vendorC": "056acac33e73c54f2112c42df33beb1efaad79a7cafbcee0c9a45df4a4ac6965"
           },
           "instance": "CVD-2026-0001",
+          "pdigest": "8843f08b56c1ddf7c9083046a3c313344408f2333b9816f641f82125a04673a2",
           "sid": "450928a828e882896566936ec3c0652d2fcfa47c2d6f42717103098cd457b968",
           "verdict": "violated"
         },
@@ -105,8 +107,8 @@
           "receipt_kind": "succinct"
         },
         "pass": true,
-        "prove_s": 133.538167445,
-        "receipt_bytes": 224268,
+        "prove_s": 130.435175631,
+        "receipt_bytes": 224422,
         "receipt_kind": "succinct"
       },
       "audit_equal": true,
@@ -121,25 +123,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 39.336410064
+          "seconds": 37.301111634
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 39.194519344
+          "seconds": 36.92805085
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 39.303887033
+          "seconds": 36.524287692
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 39.620233337
+          "seconds": 36.77514676
         }
       ],
       "scenario": "S1",
@@ -168,25 +170,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 39.165157388
+          "seconds": 36.66543408
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 39.288832496
+          "seconds": 36.391161234
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 39.631479933
+          "seconds": 36.090236678
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 39.273468638
+          "seconds": 36.17084945
         }
       ],
       "scenario": "S1",
@@ -198,9 +200,9 @@
           "verdict": "complied"
         },
         "auditor_output_equal": true,
-        "cycles": 1572864,
+        "cycles": 2097152,
         "journal": {
-          "guest_id": "b4ee73ba0f9a9b4f6d258da1ee2c3be8d546043caf02f9b43a3125abcd7341a8",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "c3dde1a77279097b175ac00481166f29741d539ce9d0270a51d447af4aa11b0c",
             "vendorA": "34d408389b1c6c29213c6aae627692275e7295450ed7a0150442b84603680f3b",
@@ -208,6 +210,7 @@
             "vendorC": "056acac33e73c54f2112c42df33beb1efaad79a7cafbcee0c9a45df4a4ac6965"
           },
           "instance": "CVD-2026-0001",
+          "pdigest": "8843f08b56c1ddf7c9083046a3c313344408f2333b9816f641f82125a04673a2",
           "sid": "01e79f3d3c8b8cc86638643930ee5d98d718e9e5611d5af3e6c6e988f08ddf92",
           "verdict": "complied"
         },
@@ -221,8 +224,8 @@
           "receipt_kind": "succinct"
         },
         "pass": true,
-        "prove_s": 108.924800219,
-        "receipt_bytes": 224268,
+        "prove_s": 129.376184127,
+        "receipt_bytes": 224422,
         "receipt_kind": "succinct"
       },
       "audit_equal": true,
@@ -237,25 +240,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 39.381542381
+          "seconds": 36.824470778
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 37.964482583
+          "seconds": 35.030226814
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 37.731907896
+          "seconds": 35.438972562000004
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 37.975611029
+          "seconds": 33.993108339
         }
       ],
       "scenario": "S1",
@@ -284,25 +287,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 39.107189114
+          "seconds": 36.387331767
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 37.868983302
+          "seconds": 34.837779063
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 37.75762046
+          "seconds": 35.081440985
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 37.581569778
+          "seconds": 34.779757749
         }
       ],
       "scenario": "S1",

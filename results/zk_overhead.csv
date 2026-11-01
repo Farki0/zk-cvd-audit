@@ -1,0 +1,7 @@
+"# overhead.py: native Rust run against the proof of the same guest logic (sweep A, Q2, n = 1)"
+L,native_s_median,prove_s_median,ratio,prove_runs,native_cpu,prover_cpu,comparison
+8,6.602e-06,38.910080121,5893681,3,AMD Ryzen 9 7950X3D 16-Core Processor,AMD Ryzen 9 7950X3D 16-Core Processor,same machine
+32,1.3015e-05,39.18204677,3010530,3,AMD Ryzen 9 7950X3D 16-Core Processor,AMD Ryzen 9 7950X3D 16-Core Processor,same machine
+128,3.718e-05,66.043685655,1776323,3,AMD Ryzen 9 7950X3D 16-Core Processor,AMD Ryzen 9 7950X3D 16-Core Processor,same machine
+512,0.000128079,193.373920218,1509802,3,AMD Ryzen 9 7950X3D 16-Core Processor,AMD Ryzen 9 7950X3D 16-Core Processor,same machine
+2048,0.000515441,723.129293041,1402933,3,AMD Ryzen 9 7950X3D 16-Core Processor,AMD Ryzen 9 7950X3D 16-Core Processor,same machine

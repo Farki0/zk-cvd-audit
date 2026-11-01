@@ -2,7 +2,7 @@
   "title": "Artifact for: Retrospective Auditing of Cross-Organizational Processes with Zero-Knowledge Proofs",
   "description": "Prototype (RISC Zero 3.0.6, CPU prover), reference model and measurement scripts for the TDK paper 'Retrospective Auditing of Cross-Organizational Processes with Zero-Knowledge Proofs': the guest program, prover host, auditor, aggregation guest, acceptance tests, evaluation scripts and the raw results behind Chapter 6.",
   "upload_type": "software",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "creators": [
     { "name": "Farkas, Ádám", "affiliation": "Budapest University of Technology and Economics" }

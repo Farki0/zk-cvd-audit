@@ -15,7 +15,7 @@
         "auditor_output_equal": true,
         "cycles": 1455765,
         "journal": {
-          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "c3dde1a77279097b175ac00481166f29741d539ce9d0270a51d447af4aa11b0c",
             "vendorA": "34d408389b1c6c29213c6aae627692275e7295450ed7a0150442b84603680f3b",
@@ -42,25 +42,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 0.057467925
+          "seconds": 0.037031675
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 0.051865487
+          "seconds": 0.032895737
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 0.052061492
+          "seconds": 0.03265576
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 0.051658481
+          "seconds": 0.032398099
         }
       ],
       "scenario": "S1",
@@ -74,7 +74,7 @@
         "auditor_output_equal": true,
         "cycles": 1456712,
         "journal": {
-          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "c3dde1a77279097b175ac00481166f29741d539ce9d0270a51d447af4aa11b0c",
             "vendorA": "34d408389b1c6c29213c6aae627692275e7295450ed7a0150442b84603680f3b",
@@ -101,25 +101,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 0.056991024
+          "seconds": 0.035832538
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 0.051661582
+          "seconds": 0.034115494
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 0.051179068
+          "seconds": 0.032899024
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 0.051308372
+          "seconds": 0.035246614
         }
       ],
       "scenario": "S1",
@@ -148,25 +148,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 0.057530175
+          "seconds": 0.036469206
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 0.050783679
+          "seconds": 0.033930709
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 0.052566984
+          "seconds": 0.034239034
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 0.051356513
+          "seconds": 0.034313573
         }
       ],
       "scenario": "S1",
@@ -180,7 +180,7 @@
         "auditor_output_equal": true,
         "cycles": 1455748,
         "journal": {
-          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "c3dde1a77279097b175ac00481166f29741d539ce9d0270a51d447af4aa11b0c",
             "vendorA": "34d408389b1c6c29213c6aae627692275e7295450ed7a0150442b84603680f3b",
@@ -207,25 +207,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 0.05640891
+          "seconds": 0.036267731
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 0.051047396
+          "seconds": 0.033417221
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 0.051063896
+          "seconds": 0.03383979
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 0.050135442
+          "seconds": 0.033559486
         }
       ],
       "scenario": "S1",
@@ -254,25 +254,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 13,
-          "seconds": 0.056294703
+          "seconds": 0.035427121
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 6,
-          "seconds": 0.051363114
+          "seconds": 0.034230338
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 7,
-          "seconds": 0.051723535
+          "seconds": 0.034813897
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 5,
-          "seconds": 0.050360177
+          "seconds": 0.034453014
         }
       ],
       "scenario": "S1",
@@ -286,7 +286,7 @@
         "auditor_output_equal": true,
         "cycles": 995385,
         "journal": {
-          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
             "vendorA": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
@@ -312,19 +312,19 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 9,
-          "seconds": 0.05375994
+          "seconds": 0.034001952
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 7,
-          "seconds": 0.050819273
+          "seconds": 0.034363316
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.051159495
+          "seconds": 0.033876779
         }
       ],
       "scenario": "S2",
@@ -338,7 +338,7 @@
         "auditor_output_equal": true,
         "cycles": 996206,
         "journal": {
-          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
             "vendorA": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
@@ -364,19 +364,19 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 9,
-          "seconds": 0.05519874
+          "seconds": 0.035188617
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 7,
-          "seconds": 0.051678381
+          "seconds": 0.033531324
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.053707606
+          "seconds": 0.033891456
         }
       ],
       "scenario": "S2",
@@ -403,19 +403,19 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 9,
-          "seconds": 0.055263262
+          "seconds": 0.036328544
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 7,
-          "seconds": 0.051977788
+          "seconds": 0.035474219
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.05223518
+          "seconds": 0.034885
         }
       ],
       "scenario": "S2",
@@ -429,7 +429,7 @@
         "auditor_output_equal": true,
         "cycles": 995291,
         "journal": {
-          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "041f8e7cf7e9ba01bce4b9cc4572d2b55ba1727efafc186124210ed7a5e5a33e",
             "vendorA": "9a09559c76e3435e2b3928b03d7bc07185a9e4c83c5fe19c9aef22d793c02f86",
@@ -455,19 +455,19 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 9,
-          "seconds": 0.054984942
+          "seconds": 0.035162377
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 7,
-          "seconds": 0.051102208
+          "seconds": 0.033050536
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.051369711
+          "seconds": 0.033983798
         }
       ],
       "scenario": "S2",
@@ -494,19 +494,19 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 9,
-          "seconds": 0.054148983
+          "seconds": 0.034147324
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 7,
-          "seconds": 0.055146268
+          "seconds": 0.033779948
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.050982361
+          "seconds": 0.032948236
         }
       ],
       "scenario": "S2",
@@ -520,7 +520,7 @@
         "auditor_output_equal": true,
         "cycles": 1160452,
         "journal": {
-          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "194844ee172f2fc3836ed3f6b3dc534560ce3895d301309ea0bcf2905c7f0565",
             "vendorA": "36d0587ea5b781a18e7390713329a091e072ab9bce3d9b34f6af7c88b756f94e",
@@ -547,25 +547,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 10,
-          "seconds": 0.054623466
+          "seconds": 0.035423916
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 5,
-          "seconds": 0.051229457
+          "seconds": 0.032453202
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.054136278
+          "seconds": 0.032268076
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 4,
-          "seconds": 0.054336756
+          "seconds": 0.033404757
         }
       ],
       "scenario": "S3",
@@ -579,7 +579,7 @@
         "auditor_output_equal": true,
         "cycles": 1159820,
         "journal": {
-          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "194844ee172f2fc3836ed3f6b3dc534560ce3895d301309ea0bcf2905c7f0565",
             "vendorA": "36d0587ea5b781a18e7390713329a091e072ab9bce3d9b34f6af7c88b756f94e",
@@ -606,25 +606,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 10,
-          "seconds": 0.056896639
+          "seconds": 0.034588637
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 5,
-          "seconds": 0.051707401
+          "seconds": 0.034123949
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.052123573
+          "seconds": 0.032734567
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 4,
-          "seconds": 0.054501352
+          "seconds": 0.032448073
         }
       ],
       "scenario": "S3",
@@ -653,25 +653,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 10,
-          "seconds": 0.053685716
+          "seconds": 0.035981916
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 5,
-          "seconds": 0.051470504
+          "seconds": 0.033904841
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.05134045
+          "seconds": 0.032810619
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 4,
-          "seconds": 0.055494461
+          "seconds": 0.033217708
         }
       ],
       "scenario": "S3",
@@ -685,7 +685,7 @@
         "auditor_output_equal": true,
         "cycles": 1160461,
         "journal": {
-          "guest_id": "2abcd918aa8d4e7e07fdd555629167c4dd37b348a236d36ecf45d22b13f4767e",
+          "guest_id": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
           "heads": {
             "maintainer": "194844ee172f2fc3836ed3f6b3dc534560ce3895d301309ea0bcf2905c7f0565",
             "vendorA": "36d0587ea5b781a18e7390713329a091e072ab9bce3d9b34f6af7c88b756f94e",
@@ -712,25 +712,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 10,
-          "seconds": 0.057453268
+          "seconds": 0.035720429
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 5,
-          "seconds": 0.050041515
+          "seconds": 0.033501248
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.055208043
+          "seconds": 0.032476595
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 4,
-          "seconds": 0.049788711
+          "seconds": 0.032144957
         }
       ],
       "scenario": "S3",
@@ -759,25 +759,25 @@
           "journal_equal": true,
           "org": "maintainer",
           "records": 10,
-          "seconds": 0.053821999
+          "seconds": 0.035929519
         },
         {
           "journal_equal": true,
           "org": "vendorA",
           "records": 5,
-          "seconds": 0.050651815
+          "seconds": 0.033426418
         },
         {
           "journal_equal": true,
           "org": "vendorB",
           "records": 6,
-          "seconds": 0.051134225
+          "seconds": 0.033019278
         },
         {
           "journal_equal": true,
           "org": "vendorC",
           "records": 4,
-          "seconds": 0.056610016
+          "seconds": 0.032304053
         }
       ],
       "scenario": "S3",

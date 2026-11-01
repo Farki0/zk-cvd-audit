@@ -2,17 +2,17 @@
  "RISC0_DEV_MODE": null,
  "cargo_lock_sha256": "ef0a9b7d1c3196296564d0add1e1b1fd987b289a645ac7268c43191eb875fbfa",
  "cpu_model": "AMD Ryzen 9 7950X3D 16-Core Processor",
- "date_utc": "2026-10-29T22:17:11+00:00",
+ "date_utc": "2026-10-31T15:13:07+00:00",
  "dev_mode_checked_off": true,
  "dev_mode_env": null,
  "dev_mode_off": true,
- "git_commit": "90125d729af390619ca6f29d509ef21db0b695b1",
+ "git_commit": "d9d4f99fb7534cd5d636a1cfaec7e43e4e206718",
  "git_dirty": true,
  "guest_image_ids": {
-  "agg": "eff615861d0f1b09e2bcf3c09d5a4972bbd53d6a0b7d499e42e58bbe35c7b785",
-  "chain": "84ca72f0ede9e12f7a387fa91b779de04f698e3c2b1bdcb1a5ff0de6cdaa76d8",
-  "full": "b4ee73ba0f9a9b4f6d258da1ee2c3be8d546043caf02f9b43a3125abcd7341a8",
-  "iface": "9d53f2a7a200ba4251cf1a85154ce657fa94764dbbf8540dfc69713a77fef9e3"
+  "agg": "9aa6ecc7cf43bb0a20ae03af585ad81d9cf04f8cb7e165c8e88ddcc12d59a793",
+  "chain": "a900a09fd15c812329655c7303129f9ad3e0cf3b2fc2cdeabd930b5e7b02023b",
+  "full": "7706df3e6ab1aaca5b0e9f42670750f1ad34542cc2fc9452fa3e418b70426bfb",
+  "iface": "ab851ac50ce82245d7c4ce8c30831e9b026a9fe0d4be8c49b2dea466d5312ec3"
  },
  "kernel": "7.2.8-9-omarchy",
  "logical_threads": 32,
