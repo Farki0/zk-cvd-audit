@@ -1,6 +1,8 @@
 # reference/
 
-Copied from the reference package of the thesis (2026-10-12); the code is unchanged apart from one comment.
+Copied from the reference package of the thesis (2026-10-12); the code is unchanged apart from one comment and the
+locality check of `vectors.py` (`check_local`: every atom of a norm has an event type its bearer role records), which
+leaves the vectors byte-identical. `python3 code/vectors.py locality` checks Q1-Q5 and that a non-local norm is rejected.
 
 | Here | Copied from | What it is |
 | --- | --- | --- |

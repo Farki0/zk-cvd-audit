@@ -52,6 +52,24 @@ def formula_norm(name, phi):
     return {"name": name, **table_of(R.ltlf_to_dfa(phi).minimise(), "formula", 0)}
 
 
+# Recording vocabulary of each role: the message kinds it sends or receives (P.SCHEMA) and its internal record types.
+INTERNAL_TYPES = {"maintainer": {"report"}, "vendor": {"triage", "work", "patch", "advisory", "mitigation"}}
+
+
+def vocabulary(role):
+    return INTERNAL_TYPES.get(role, set()) | {k for k, (s, r) in P.SCHEMA.items() if role in (s, r)}
+
+
+def check_local(stmt):
+    """Locality: every atom of every norm has an event type that the bearer role records. Otherwise no record of the
+    bearer's slice can satisfy the atom, and the verdict is not that of the norm on the run. Raises ValueError."""
+    voc = vocabulary(stmt["role"])
+    for n in stmt["norms"]:
+        foreign = sorted({a["type"] for a in n["atoms"]} - voc)
+        if foreign:
+            raise ValueError(f"norm {n.get('name', '?')} is not local to role {stmt['role']}: {foreign}")
+
+
 def statements():
     emb, pat = chain_norm("embargo", R.N_EMBARGO), chain_norm("patch_duty", R.N_PATCH)
     ack, cov = formula_norm("ack", R.PHI_ACK), formula_norm("cover", R.PHI_COVER)
@@ -63,6 +81,7 @@ def statements():
         "Q5": {"name": "Q5", "role": "vendor", "disclosure": "verdict+responsible", "norms": [cov]},
     }
     for s in st.values():
+        check_local(s)
         s["canonical"] = P.enc(s)                 # the exact bytes the guest receives, hashes and parses
         s["id"] = P.H("statement", s["canonical"])
     return st
@@ -412,9 +431,18 @@ def main():
     s.add_argument("--length", type=int, required=True)
     s.add_argument("--out", required=True)
     s.add_argument("--no-close", action="store_true")
+    sub.add_parser("locality")
     a = ap.parse_args()
     if a.cmd == "golden":
         golden(a.outdir)
+    elif a.cmd == "locality":
+        st = statements()                       # raises if a golden statement is not local
+        bad = {"name": "X", "role": "vendor", "norms": [formula_norm("vendor_reports", R.F(R.At(R.Ev("report"))))]}
+        try:
+            check_local(bad)
+            sys.exit("FAIL: a vendor norm on the maintainer's report event was accepted")
+        except ValueError as e:
+            print(f"ok: {', '.join(st)} are local; rejected: {e}")
     else:
         beh = {f"vendor{i + 1:02d}": BEHAVIOURS[i % 4] for i in range(a.vendors)}
         sc, _ = scenario(f"n={a.vendors} L={a.length}", f"CVD-n{a.vendors}-L{a.length}", beh, statements(),

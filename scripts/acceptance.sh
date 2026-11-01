@@ -13,6 +13,7 @@ echo "== 0. the reference vectors regenerate from the reference code"
 PYTHONDONTWRITEBYTECODE=1 python3 reference/code/vectors.py golden "$RUN/regenerated" > /dev/null
 diff -r "$V" "$RUN/regenerated"     # on its own line: set -e does not stop at a failing command left of '&&'
 echo "ok: vectors/ identical to the output of reference/code/vectors.py golden"
+PYTHONDONTWRITEBYTECODE=1 python3 reference/code/vectors.py locality | tee "$RUN/locality.log"
 echo "== 1. hash examples"
 $H hashes --vectors $V | tee "$RUN/hashes.log" | tail -1
 echo "== 2+3. journals of S1-S3 x Q1-Q5 and auditor outputs"

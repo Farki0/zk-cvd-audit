@@ -39,6 +39,7 @@ def dump(obj, path):
 def statement(name, norms, disclosure='verdict+responsible'):
     """A statement file in the format of reference/vectors/statements (norms from V.chain_norm / V.formula_norm)."""
     s = {'name': name, 'role': 'vendor', 'disclosure': disclosure, 'norms': norms}
+    V.check_local(s)
     s['canonical'] = P.enc(s)
     s['id'] = P.H('statement', s['canonical'])
     return s
