@@ -2,7 +2,7 @@
 #   just reproduce         the whole evaluation without proofs (about 10 minutes)
 #   just smoke             the quick check (minutes): build + executor-only acceptance
 #   just reproduce-prove   with real proofs (about 12 hours; needs 16 GB RAM)
-# `just reproduce --smoke` is not possible (just reads the flag itself), so the smoke test is `just smoke`.
+#   just reproduce --smoke the same as `just smoke` (`--prove` = `just reproduce-prove`); the flag goes to scripts/reproduce.sh
 
 default:
     @just --list
@@ -15,9 +15,9 @@ build:
 smoke:
     scripts/reproduce.sh --smoke
 
-# the evaluation without proofs: EQ1, EQ2, coalition limit, cycle counts -> results/
-reproduce:
-    scripts/reproduce.sh
+# the evaluation without proofs: EQ1, EQ2, coalition limit, cycle counts -> results/ (`--smoke`, `--prove` as above)
+reproduce *flags:
+    scripts/reproduce.sh {{flags}}
 
 # everything, with real proofs (acceptance with proofs, the short plan of the sweeps)
 reproduce-prove:
