@@ -12,7 +12,7 @@ rzup install r0vm 3.0.6
 rzup install rust 1.97.0
 rzup install cpp 2024.1.5
 rzup show                                   # must list exactly these versions
-git clone <repo> && cd <repo>/cvd-audit     # every command below runs from cvd-audit/
+git clone https://github.com/Farki0/zk-cvd-audit && cd zk-cvd-audit   # every command below runs from the repository root
 python3 -m pip install --user -r requirements.txt \
   || python3 -m pip install --user --break-system-packages -r requirements.txt   # Ubuntu 24.04 refuses the first
 python3 -c "import cryptography; print(cryptography.__version__)"   # 41.0.7
