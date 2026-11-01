@@ -5,11 +5,32 @@
   "version": "1.0.0",
   "license": "MIT",
   "creators": [
-    { "name": "Farkas, Ádám", "affiliation": "Budapest University of Technology and Economics" }
+    {
+      "name": "Farkas, Ádám",
+      "affiliation": "Budapest University of Technology and Economics"
+    }
   ],
   "contributors": [
-    { "name": "Farkas, Martin", "type": "Supervisor", "affiliation": "Budapest University of Technology and Economics" },
-    { "name": "Kocsis, Imre", "type": "Supervisor", "affiliation": "Budapest University of Technology and Economics" }
+    {
+      "name": "Farkas, Martin",
+      "type": "Supervisor",
+      "affiliation": "Budapest University of Technology and Economics",
+      "orcid": "0000-0003-4260-717X"
+    },
+    {
+      "name": "Kocsis, Imre",
+      "type": "Supervisor",
+      "affiliation": "Budapest University of Technology and Economics",
+      "orcid": "0000-0002-2792-3572"
+    }
   ],
-  "keywords": ["zero-knowledge proofs", "zkVM", "RISC Zero", "business process compliance", "deontic logic", "runtime verification", "coordinated vulnerability disclosure"]
+  "keywords": [
+    "zero-knowledge proofs",
+    "zkVM",
+    "RISC Zero",
+    "business process compliance",
+    "deontic logic",
+    "runtime verification",
+    "coordinated vulnerability disclosure"
+  ]
 }

@@ -4,9 +4,60 @@ Prototype of the thesis: the guest program of Algorithm 5.1, a prover host, the 
 aggregation guest, the acceptance tests and the benchmark runner. zkVM: **RISC Zero 3.0.6**
 (CPU prover). Everything the tests compare against lives in `reference/` (vectors and the Python reference model).
 
-**Reproduce:** `docker run --rm -v "$PWD/out:/out" cvd-audit smoke` or `just smoke` (minutes), `just reproduce`
-(about 10 minutes, no proofs). Results map and limits: [docs/ARTIFACT.md](docs/ARTIFACT.md). Measuring on another machine:
-[MEASURE.md](MEASURE.md).
+It accompanies the TDK paper *Retrospective Auditing of Cross-Organizational Processes with Zero-Knowledge Proofs*
+(Ádám Farkas, BME VIK, 2026; supervisors Martin Farkas and Dr. Imre Kocsis).
+
+## Reproduce
+
+With Docker, from the image of the results tag (no clone or toolchain needed):
+
+```sh
+docker run --rm --user "$(id -u):$(id -g)" -v "$PWD/out:/out" ghcr.io/farki0/zk-cvd-audit:v1.0.0 reproduce
+```
+
+This runs the whole evaluation without proofs (about 10 minutes) and writes the result files to `out/`; `--user`
+keeps them owned by you. Other recipes go in place of `reproduce`: `smoke` (build check and executor-only acceptance,
+minutes) and `reproduce-prove` (real proofs, about 12 hours, 16 GB RAM). The release workflow publishes the image
+for every release tag.
+
+From a clone: `just reproduce`, `just smoke` (or `just reproduce --smoke`), `just reproduce-prove`; or build the image
+with `docker build -t cvd-audit .` and run it as above with `cvd-audit` as the image. The repository also opens as a
+dev container (`.devcontainer/`, built from the `Dockerfile`). Measuring on another machine: [MEASURE.md](MEASURE.md).
+
+## Results map
+
+One row per table or figure of Chapter 6 and its appendix. Times are wall-clock on an AMD Ryzen 9 7950X3D (16 cores,
+96 GB) for real proofs and on an Intel i7-9750H under WSL2 for the executor-only parts. Details:
+[docs/ARTIFACT.md](docs/ARTIFACT.md#results-map).
+
+| Thesis item | Command | Output (under `results/`) | Time |
+| --- | --- | --- | --- |
+| EQ1 on the fixed vectors (verdict table) | `just tab-correctness` | `accept_exec.json` | minutes |
+| EQ1 beyond the vectors (differential test, 120 + 30x15 inputs) | `python3 scripts/eq1_diff.py` | `eq1_diff.json` | minutes |
+| The eleven attacks, executor-only and with real proofs | `just tab-attacks`; `scripts/acceptance_prove.sh` | `attacks_exec.json`, `attacks_prove.json` | minutes; 1435 s |
+| EQ2 disclosure (view against simulation, 175 views) | `just tab-disclosure` | `eq2_disclosure.json`, `eq2_aggregate_prove.json` | minutes; +30 min with `--prove` |
+| Coalition limit (22 cases) | `just tab-coalition` | `collusion.json` | minutes |
+| Summary table of the three checks | `scripts/evaluate.sh` | `eval_summary.json` | 238 s |
+| Cycles against slice length (series A, C) and vendors (series B) | `just fig-scalability` | `cycles.csv`, `cycles_env.json` | minutes |
+| Cycles against monitor size and against record size | `scripts/cost_extra.py stmt record` | `cycles_statement_size.csv`, `cycles_record_size.csv` | minutes |
+| Second domain (supply contract with a penalty, end of Chapter 3; reference model only, no proofs) | `python3 scripts/second_domain.py` | `second_domain.json` | seconds |
+| Native baseline and the price of zero knowledge | `just tab-overhead` | `native_baseline.csv`, `zk_overhead.csv` | seconds |
+| Proving times: series K, C, B, D, A | `python3 scripts/bench.py K C B D A` | `measurements.csv`, `measurements_audit.csv`, `bench_env.json`, `bench_commands.log` | 456 + 465 + 1466 + 795 + 3372 s |
+| Proving times with realistic record sizes (series E) | `python3 scripts/bench.py E --E-lengths 128 512` | rows `E256`, `E1024` in `measurements.csv` | 15-20 min on a 7950X3D (planned) |
+| Repeated points, cold start | `python3 scripts/bench.py B --B-reps 3`; `--cold` | `measurements.csv`, `measurements_cold.csv`, `wall_times_*.csv` | hours |
+
+## Reproduction limits
+
+* Verdicts, journals, cycle and segment counts are deterministic. They match the committed files when the guest
+  image ids of `runs/*/env.json` equal `results/cycles_env.json`; another build environment gives another image id,
+  so across machines compare user cycles.
+* The differential test uses the fixed seed 2026. Salts and nonces of the EQ2 scenarios come from a CSPRNG, so
+  receipts differ between runs; the checks compare only what the protocol makes public.
+* Proving times depend on the machine; points of different series at the same size differ by up to 8 %. The
+  thesis's times are from one machine.
+* CPU prover only. The L = 2048 point peaks at 9.4 GB of memory. The scripts refuse to run with `RISC0_DEV_MODE` set.
+
+Details: [docs/ARTIFACT.md](docs/ARTIFACT.md#reproduction-limits).
 
 ## One command per task
 
@@ -63,6 +114,25 @@ Install and the measurement procedure for another machine: **MEASURE.md**.
 Rust 1.94.1 for the host (`rust-toolchain.toml`), `risc0-zkvm = 3.0.6`, `risc0-build = 3.0.6`, RISC Zero toolchain
 (`rzup`): `cargo-risczero 3.0.6`, `r0vm 3.0.6`, `rust 1.97.0`, `cpp 2024.1.5`. Both `Cargo.lock` files
 (`/Cargo.lock`, `/methods/guest/Cargo.lock`) are committed. Python 3.12 with `requirements.txt`.
+
+## Results tag
+
+The numbers in the thesis come from tag `v1.0.0` (Zenodo version 1.0.0). Later versions change the packaging, never
+the results.
+
+## Cite
+
+Cite the thesis and this repository with its version (`CITATION.cff`; Zenodo metadata: `.zenodo.json`).
+
+```bibtex
+@software{farkas2026zkcvdaudit,
+  author  = {Farkas, Ádám},
+  title   = {Artifact for: Retrospective Auditing of Cross-Organizational Processes with Zero-Knowledge Proofs},
+  year    = {2026},
+  version = {1.0.0},
+  url     = {https://github.com/Farki0/zk-cvd-audit}
+}
+```
 
 ## License
 
